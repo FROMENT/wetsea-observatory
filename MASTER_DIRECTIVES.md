@@ -1,6 +1,6 @@
 # WST Observatory — Directives Consolidées
 
-> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-06-26T02:25:57Z
+> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-07-03T05:05:43Z
 > Source : https://github.com/FROMENT/wetsea-observatory
 > **Ne pas éditer ce fichier manuellement** — il est régénéré à chaque push.
 
@@ -24,6 +24,7 @@ l'intégralité de la charte WST en une seule source indexée.
 - **[`brand/mascot.md`](#source-brand-mascot-md)** — WetSea Observatory — Mascot System
 - **[`brand/visual_references.md`](#source-brand-visual_references-md)** — WetSea Observatory — Visual References Matrix
 - **[`brand/wetseatech_program.md`](#source-brand-wetseatech_program-md)** — WetSeaTech — Program Adapter
+- **[`brand_guidelines 2.md`](#source-brand_guidelines 2-md)** — WetSea Observatory — Brand Guidelines
 - **[`brand_guidelines.md`](#source-brand_guidelines-md)** — WetSea Observatory — Brand Guidelines
 - **[`branding/composition_rules.md`](#source-branding-composition_rules-md)** — Cinematic Composition Rules
 - **[`branding/forbidden_styles.md`](#source-branding-forbidden_styles-md)** — Forbidden Aesthetics
@@ -1737,6 +1738,57 @@ glitch sans fonction.
 - [ ] Le visuel évite-t-il cyberpunk, gaming, stock corporate et clickbait ?
 - [ ] L'adaptation respecte-t-elle `brand/forbidden.md` ?
 
+---
+
+<a id="source-brand_guidelines 2-md"></a>
+
+## 📄 SOURCE: `brand_guidelines 2.md`
+
+# WetSea Observatory — Brand Guidelines
+<!-- Naming rule appliquée : "WetAndSeaAI / WetSeaTech" sont des labels programme, pas le nom canonique -->
+<!-- Voir identity/brand_core.md pour la version consolidée de ce fichier -->
+
+## Positioning
+A cinematic technical editorial observatory documenting hidden systems between oceans, infrastructures, and signals.
+
+## Naming Consistency
+- Canonical identity name: **WetSea Observatory**.
+- "WetAndSeaAI" and "WetSeaTech" may be used as campaign or product labels, never as a replacement for the canonical brand name in core system files.
+
+## Brand Character
+- Calm and precise.
+- Sophisticated but readable.
+- Documentary, technical, timeless.
+- Narrative without spectacle.
+
+## Visual Principles
+1. **Strong negative space**: breathable compositions and clear hierarchy.
+2. **Subtle technical cues**: routes, annotations, instrumentation markers.
+3. **Premium editorial minimalism**: restraint, coherence, typography discipline.
+4. **Controlled chroma system**: deep navy, graphite, muted cyan, dark ocean green, off-white, mineral sand (plus brushed aluminum as material cue).
+
+## Forbidden Directions
+- Cyberpunk / RGB gaming / aggressive neon.
+- Startup SaaS style, YouTube merch look, generic AI aesthetics.
+- Crypto/web3 codes or cliché sci-fi tropes.
+- Cartoon, kawaii, or hyper-expressive mascots.
+- Graphic overload and oversized logos.
+
+## Applications
+The system must remain coherent for:
+- posters,
+- restrained apparel,
+- premium mugs,
+- minimal stickers,
+- podcast covers,
+- YouTube thumbnails,
+- premium Etsy products,
+- desk objects,
+- editorial blog visuals.
+Imahge generation 
+WST PRIORITY RULE
+- Prefer omission over invention.
+-Negative space is superior to fabricated detail.
 ---
 
 <a id="source-brand_guidelines-md"></a>
