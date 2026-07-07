@@ -67,10 +67,13 @@ for (const kit of kits) {
   if (!good) { bad++; if (v.length) console.log("    ", v.join("; ")); }
 }
 const broken = structuredClone(kits[0]);
-broken.titre = "x".repeat(80); broken.chapitrage_youtube[0].timestamp = "01:00";
+broken.titre = "x".repeat(80);                       // length rule
+broken.chapitrage_youtube[0].timestamp = "01:00";     // chapter rule
+broken.hook_intro = "Une approche révolutionnaire.";  // anti-drift: forbidden phrase
 const bv = validateKit(broken);
-console.log(\`  \${bv.length >= 2 ? "ok" : "BAD"} negative-control  violations=\${bv.length}\`);
-if (bv.length < 2) bad++;
+const caughtDrift = bv.some((x) => x.includes("forbidden phrase"));
+console.log(\`  \${bv.length >= 3 && caughtDrift ? "ok" : "BAD"} negative-control  violations=\${bv.length} drift=\${caughtDrift}\`);
+if (bv.length < 3 || !caughtDrift) bad++;
 process.exit(bad === 0 ? 0 : 1);
 `,
   );

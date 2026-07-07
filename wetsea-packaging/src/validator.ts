@@ -1,5 +1,5 @@
 import type { EditorialKit } from "./schema";
-import { FACT_LABELS } from "./schema";
+import { FACT_LABELS, BRAND } from "./schema";
 
 const MMSS = /^\d{2}:\d{2}$/;
 const len = (s: string) => [...s].length; // count code points, not UTF-16 units
@@ -50,6 +50,24 @@ export function validateKit(k: EditorialKit): string[] {
   for (const [i, f] of k.faits_marquants.entries())
     if (!docs.has(f.source_ref))
       v.push(`faits_marquants[${i}].source_ref "${f.source_ref}" is not a sources_or document`);
+
+  // Editorial anti-drift: the brand canon bans certain phrases outright
+  // ("n'emploie jamais ..."). The system prompt only *asks* the model to avoid
+  // them; enforce it here so a drifted phrasing cannot slip through the retry
+  // loop or the /publish re-validation. Scan the model-authored fields only —
+  // not sources_or claims, which are verbatim external quotes.
+  const authored = [
+    k.titre,
+    k.hook_intro,
+    k.ecran_de_fin_cta,
+    ...k.faits_marquants.map((f) => f.fait),
+    ...k.chapitrage_youtube.map((c) => c.titre),
+  ]
+    .join("\n")
+    .toLowerCase();
+  for (const phrase of BRAND.WetSeaTech.forbidden_phrases)
+    if (authored.includes(phrase.toLowerCase()))
+      v.push(`forbidden phrase "${phrase}" appears in the kit (brand canon bans it)`);
 
   return v;
 }

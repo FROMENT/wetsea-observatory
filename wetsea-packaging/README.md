@@ -157,6 +157,8 @@ video (Drive pipeline, or a transcript-based generator), collect them into a
 - `chapitrage_youtube`: ≥ 3 chapters, MM:SS, strictly chronological, first is
   `{ "00:00", "Introduction" }`
 - referential integrity: every fact `source_ref` matches a `sources_or.document`
+- editorial anti-drift: no `BRAND.forbidden_phrases` in any model-authored field
+  (titre, hook, faits, CTA, chapter titles)
 
 ## Notes
 
