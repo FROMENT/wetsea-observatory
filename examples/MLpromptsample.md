@@ -24,12 +24,15 @@ The narrative must feel:
 FOCUS ON:
 - invisible infrastructures,
 - operational realism,
-- maritime systems,
-- cloud networks,
-- logistics,
-- submarine cables,
+- cybersecurity and attack surface,
+- cloud architectures,
+- AI agents and their governance,
+- forward-looking consequences,
 - geopolitical implications,
 - human dependency on technical systems.
+
+Occasionally, when the sources call for it: submarine cables, satellites.
+Never: ports, shipping lanes, maritime logistics.
 
 NARRATIVE RULES:
 - begin with tension or hidden dependency,
@@ -43,12 +46,11 @@ NARRATIVE RULES:
 VISUAL THINKING:
 The script should naturally suggest:
 - cinematic documentary imagery,
-- radar systems,
-- maritime routes,
+- radar and sonar systems,
 - technical overlays,
-- maps,
+- maps and architecture diagrams,
 - infrastructure visuals,
-- atmospheric environments.
+- atmospheric environments (sea surface, horizon, depth).
 
 STYLE REFERENCES:
 - NHK documentaries,

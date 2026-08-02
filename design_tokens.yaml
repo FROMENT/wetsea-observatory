@@ -199,7 +199,7 @@ atmosphere:
     type: "film grain, editorial paper, not digital noise"
   depth_layers:
     - "Base: map or infrastructure context"
-    - "Mid: technical object (cable, buoy, port crane, vessel track)"
+    - "Mid: technical object (submarine cable, satellite, buoy, rack, vessel silhouette)"
     - "Top: concise annotations and title"
   lighting:
     style: "soft cinematic, muted highlights, no hard neon glow"
@@ -257,7 +257,7 @@ mascots:
     - name: "Node"
       role: "Network interconnection"
     - name: "Courier Vessel"
-      role: "Movement across logistics routes"
+      role: "Movement across a network or a route — never port logistics"
     - name: "Hybrid Infrastructure-Living"
       examples: ["analytical octopus", "abstract manta ray", "seabird glyph", "solitary navigator"]
       role: "Poetic bridge between biological and technical systems"

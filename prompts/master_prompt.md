@@ -20,20 +20,30 @@ Rule: 90% dark neutral tones, 10% muted cyan accents maximum.
 
 ## SUBJECT
 [INSERT SUBJECT]
-<!-- Exemples de sujets adaptés :
-  - "North Atlantic submarine cable network — AEConnect-1 route"
-  - "Port of Rotterdam as global logistics node — aerial infrastructure view"
+<!-- Exemples de sujets adaptés — le SUJET vient du périmètre éditorial de la
+     chaîne : cybersecurity, cloud architecture, AI agents, technology foresight.
+  - "Autonomous agent escaping its sandbox — abstract containment diagram"
   - "BGP routing failure cascade — abstract network diagram"
   - "Hyperscaler datacenter geography — Atlantic coast"
-  - "Submarine cable landing station on a foggy coastline"
-  - "Maritime traffic density map — Strait of Malacca"
+  - "Identity federation across cloud providers — trust boundary map"
+  - "Agentic loop as a self-correction device — iteration timeline"
+  - "Technical debt accumulating without a line of code changing"
+
+     Sujets OCCASIONNELS, admis quand l'actualité le justifie :
+  - "North Atlantic submarine cable network — abstract route topology"
+  - "Low-earth-orbit satellite constellation — coverage geometry"
+
+     JAMAIS un sujet : ports, routes maritimes, logistique portuaire, trafic
+     maritime. Retirés le 2026-08-02 — hors périmètre de la chaîne.
 -->
 
 ## OPTIONAL ELEMENTS
-Use only elements relevant to the subject:
-Sonar circles · maritime routes · underwater cables · radar geometry · navigation markers
-ocean currents · abstract cloud infrastructure · port cranes · vessel silhouettes
-coordinate grids · depth contours · signal paths
+Use only elements relevant to the subject. These are ILLUSTRATION, never the subject:
+Sonar circles · radar geometry · navigation markers · coordinate grids · depth contours
+signal paths · ocean currents · underwater cables · satellite orbits
+abstract cloud infrastructure · network meshes · architecture diagrams
+sailing boats · paragliding · diving · vessel silhouettes · sea surface · horizon
+NEVER: port cranes, container terminals, shipping lanes, maritime logistics.
 
 ## NEGATIVE PROMPT
 <!-- Inclure dans les outils qui supportent les negative prompts (Midjourney, Flux, SD) -->

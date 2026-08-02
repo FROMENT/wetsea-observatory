@@ -1,6 +1,6 @@
 # WST Observatory — Directives Consolidées
 
-> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-07-03T05:05:43Z
+> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:06:13Z
 > Source : https://github.com/FROMENT/wetsea-observatory
 > **Ne pas éditer ce fichier manuellement** — il est régénéré à chaque push.
 
@@ -75,14 +75,16 @@ l'intégralité de la charte WST en une seule source indexée.
 # WetSea Observatory — Agent Rules
 
 WetSea Observatory is a premium editorial visual identity system focused on:
-- oceans,
-- invisible infrastructures,
-- submarine cables,
-- maritime systems,
-- ports,
+- cybersecurity,
 - cloud architecture,
-- signals,
-- global technical networks.
+- AI agents and autonomous systems,
+- technology foresight,
+- invisible infrastructures,
+- contemporary technical systems.
+
+Occasional subjects: submarine cables, satellites.
+Complementary illustration only, never subject: sailing boats, paragliding,
+diving, vessel silhouettes, sea and depth.
 
 The aesthetic must feel:
 - calm,
@@ -141,7 +143,7 @@ Summary: deep navy (#0A1A2B) · graphite (#2A2F36) · muted cyan (#5E8FA3) · of
 ## 📄 SOURCE: `README.md`
 
 # wetsea-observatory
-Editorial visual identity system exploring oceans, invisible infrastructures, maritime networks, submarine cables, ports and contemporary technical systems through cinematic minimalist design.
+Editorial visual identity system for a technical channel covering cybersecurity, cloud architecture, AI agents, technology foresight. Submarine cables and satellites appear as occasional subjects; marine and aerial imagery — sailing boats, paragliding, diving, vessel silhouettes — serves as complementary illustration, never as subject matter. Cinematic minimalist design.
 
 ---
 
@@ -1074,7 +1076,8 @@ Un observatoire éditorial et technique qui documente les systèmes invisibles e
 - maintenir une direction artistique cohérente entre les canaux
 
 **Périmètre thématique :**
-- océans, routes maritimes, ports
+- cybersécurité, architectures cloud, agents IA, prospective
+- mer et profondeur comme registre visuel, jamais comme sujet
 - câbles sous-marins, réseaux globaux
 - architectures cloud, systèmes techniques contemporains
 - infrastructures invisibles et dépendances opérationnelles
@@ -1127,7 +1130,7 @@ Fusion subtile de :
 ## Composants d'identité visuelle
 
 - Textures cartographiques océaniques
-- Sujets infrastructure (câbles, ports, terminaux, navires)
+- Sujets infrastructure (câbles sous-marins, satellites, datacenters, réseaux)
 - Graphiques signal (vecteurs, marqueurs temporels, IDs)
 - Hiérarchie typographique retenue
 - Espace négatif comme élément structurel
@@ -1856,7 +1859,7 @@ WST PRIORITY RULE
 
 ## Depth Strategy
 1. Base layer: map or infrastructure context.
-2. Mid layer: technical object (cable, buoy, port crane, vessel track).
+2. Mid layer: technical object (submarine cable, satellite, buoy, rack, vessel silhouette).
 3. Top layer: concise annotations and title.
 
 ## Motion & Framing
@@ -2183,12 +2186,16 @@ En complément de `brand/forbidden.md` :
 
 ## Éléments visuels récurrents
 
-Privilégier selon le sujet :
-- Routes maritimes et lignes de câbles
-- Cercles radar / sonar
-- Grilles d'infrastructure, cartes de réseau
-- Ports, terminaux, relais
+Privilégier selon le sujet. Ces éléments illustrent, ils ne sont pas le sujet :
+- Cercles radar / sonar, géométrie de signal
+- Grilles d'infrastructure, cartes de réseau, diagrammes d'architecture
+- Frontières de confiance, plans de contrôle abstraits
+- Lignes de câbles sous-marins, orbites de satellites (sujets occasionnels)
+- Voiliers, parapente, plongée, silhouettes de navires, surface de mer, horizon
 - Superpositions tactiques et données abstraites
+
+Jamais : ports, terminaux à conteneurs, grues portuaires, routes maritimes,
+logistique portuaire.
 
 ---
 
@@ -2326,7 +2333,7 @@ Définir explicitement dans chaque vidéo :
 ### Format A — Fait opérationnel
 Structure : [Sujet concret] + [conséquence ou échelle mesurable]
 ```
-Ce port traite 15 millions de conteneurs. Sans que personne ne le voie.
+Ce modèle traite 15 millions de requêtes par jour. Sans journal d'audit.
 400 câbles sous-marins font tenir l'internet mondial.
 Un câble coupé en mer Rouge : ce qui se passe en 48 heures.
 ```
@@ -2336,7 +2343,7 @@ Structure : [Affirmation contre-intuitive] + [précision]
 ```
 Le cloud est physique. Voici où il se trouve vraiment.
 Internet n'est pas dans les airs. Il est sous l'eau.
-Ces routes n'existent pas sur les cartes. Elles transportent 95% du trafic mondial.
+Ces dépendances n'apparaissent dans aucun inventaire. Elles portent toute la chaîne.
 ```
 
 ### Format C — Question analytique (usage modéré)
@@ -2352,7 +2359,7 @@ Structure : [Événement réel] + [angle analytique]
 ```
 Quand un câble sous-marin se coupe : anatomie d'une coupure réseau.
 La panne BGP de 2021 : comment Facebook a disparu d'internet.
-Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale.
+xz/liblzma : la porte dérobée qui a failli entrer dans toutes les distributions.
 ```
 
 ---
@@ -2361,7 +2368,7 @@ Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale
 
 - Placer le mot-clé principal dans les **40 premiers caractères**
 - Mots-clés prioritaires WetSea Observatory :
-  `câbles sous-marins · infrastructure maritime · port · datacenter · réseau internet · logistique · BGP · cloud`
+  `cybersécurité · architecture cloud · agents IA · Zero Trust · datacenter · réseau internet · BGP · câbles sous-marins`
 - Utiliser les termes techniques précis plutôt que leurs équivalents génériques
   (préférer "câble sous-marin" à "internet" ; "nœud BGP" à "réseau")
 - Ne pas utiliser de hashtags dans le titre (les mettre en description)
@@ -2383,7 +2390,7 @@ Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale
 
 | Miniature montre | Titre doit |
 |---|---|
-| Sujet visuel fort (câble, port) | Donner l'angle analytique, pas redécrire l'image |
+| Sujet visuel fort (câble, topologie) | Donner l'angle analytique, pas redécrire l'image |
 | Texte court (2–4 mots) | Développer et préciser |
 | Sujet abstrait (réseau, données) | Ancrer dans le concret (chiffre, lieu, événement) |
 
@@ -2396,10 +2403,10 @@ Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale
 - `Quand un câble sous-marin se coupe : ce qui se passe vraiment`
 - `AEConnect-1 : la route secrète entre New York et Dublin`
 
-**Ports et logistique**
-- `Rotterdam : comment le plus grand port d'Europe fonctionne`
-- `Un conteneur perdu en mer : ce que ça révèle sur la logistique mondiale`
-- `Détroit de Malacca : 40% du commerce maritime mondial en 2,7 km`
+**Agents IA et gouvernance**
+- `Un agent IA avec des droits d'admin : ce que ça ouvre vraiment`
+- `MCP : le protocole qui donne des mains aux modèles`
+- `Autoriser un projet IA : les 7 points qui bloquent en vrai`
 
 **Cloud et datacenters**
 - `Où se trouve vraiment le cloud ? Une géographie physique`
@@ -2676,7 +2683,18 @@ Measured, technical, contemplative, global.
 - Negative prompts:
 
 ## Example Prompt
-"Editorial plate of a submarine cable landing station on a foggy coastline, layered with marine contour lines, route labels, and restrained instrument marks, deep navy and graphite base with muted cyan highlights, documentary realism, no neon, no cyberpunk, no gaming style."
+"Editorial plate of a cloud infrastructure topology seen as an instrument panel, layered with contour lines, trust boundaries, and restrained instrument marks, deep navy and graphite base with muted cyan highlights, documentary realism, no neon, no cyberpunk, no gaming style."
+
+## Second Example — sujet occasionnel
+"Editorial plate of a submarine cable route traced across an abstract sea surface, layered with depth contours and signal paths, deep navy and graphite base with muted cyan highlights, documentary realism, no neon, no cyberpunk, no gaming style."
+
+## Portée des sujets
+Sujets principaux : cybersécurité, architectures cloud, agents IA, prospective.
+Sujets occasionnels : câbles sous-marins, satellites.
+Illustration complémentaire, jamais sujet : voiliers, parapente, plongée,
+silhouettes de navires, surface de mer, horizon.
+Jamais : ports, grues portuaires, terminaux à conteneurs, routes maritimes,
+logistique portuaire.
 
 ---
 
@@ -2821,7 +2839,9 @@ WetSea Observatory visualizes the hidden routes of the modern world through calm
 
 ## Components
 - Oceanic cartographic textures.
-- Infrastructure subjects (cables, ports, terminals, vessels).
+- Infrastructure subjects (submarine cables, satellites, datacentres, networks).
+- Marine and aerial imagery (sailing boats, paragliding, diving, vessel
+  silhouettes) as COMPLEMENTARY ILLUSTRATION only — never as subject.
 - Signal graphics (vectors, timing marks, IDs).
 - Restrained typographic hierarchy.
 
@@ -2857,12 +2877,15 @@ The narrative must feel:
 FOCUS ON:
 - invisible infrastructures,
 - operational realism,
-- maritime systems,
-- cloud networks,
-- logistics,
-- submarine cables,
+- cybersecurity and attack surface,
+- cloud architectures,
+- AI agents and their governance,
+- forward-looking consequences,
 - geopolitical implications,
 - human dependency on technical systems.
+
+Occasionally, when the sources call for it: submarine cables, satellites.
+Never: ports, shipping lanes, maritime logistics.
 
 NARRATIVE RULES:
 - begin with tension or hidden dependency,
@@ -2876,12 +2899,11 @@ NARRATIVE RULES:
 VISUAL THINKING:
 The script should naturally suggest:
 - cinematic documentary imagery,
-- radar systems,
-- maritime routes,
+- radar and sonar systems,
 - technical overlays,
-- maps,
+- maps and architecture diagrams,
 - infrastructure visuals,
-- atmospheric environments.
+- atmospheric environments (sea surface, horizon, depth).
 
 STYLE REFERENCES:
 - NHK documentaries,
@@ -2939,16 +2961,15 @@ Create a premium cinematic YouTube thumbnail for a documentary-style video about
 
 The thumbnail must visually represent:
 - invisible systems,
-- global infrastructures,
-- maritime networks,
+- cybersecurity and trust boundaries,
+- cloud architectures,
+- AI agents and their control planes,
 - technical exploration,
-- geopolitical flows,
-- oceanic intelligence,
-- cloud systems,
-- submarine cables,
-- ports,
+- forward-looking analysis,
 - signals,
 - modern technological ecosystems.
+
+Occasionally (not by default): submarine cables, satellites.
 
 STYLE:
 A subtle fusion of:
@@ -2973,19 +2994,23 @@ COMPOSITION:
 - atmospheric depth.
 
 VISUAL ELEMENTS:
-Use only elements relevant to the topic:
-- maritime routes,
-- submarine cables,
+Use only elements relevant to the topic. These are ILLUSTRATION, never the subject:
 - radar circles,
-- ports,
+- sonar geometry,
 - datacenters,
+- abstract cloud infrastructure,
+- network meshes and architecture diagrams,
+- submarine cables,
 - satellites,
 - ocean currents,
+- depth contours,
 - technical diagrams,
 - navigation markers,
 - signal geometry,
-- infrastructure maps,
-- cloud systems.
+- sailing boats, paragliding, diving, vessel silhouettes,
+- sea surface, horizon.
+
+NEVER: port cranes, container terminals, shipping lanes, maritime logistics.
 
 COLOR PALETTE:
 <!-- Source canonique : design_tokens.yaml — ne pas modifier ces valeurs ici -->
@@ -3266,14 +3291,24 @@ during the staged migration. Do not add or maintain mascot rules here.
 ## IDENTITÉ
 
 WetAndSeaAI / WetSeaTech explore :
-- océans,
-- infrastructures invisibles,
-- réseaux mondiaux,
-- ports,
-- routes maritimes,
-- câbles sous-marins,
+- cybersécurité,
 - architectures cloud,
+- agents IA et systèmes autonomes,
+- prospective technologique,
+- infrastructures invisibles,
 - systèmes techniques contemporains.
+
+Sujets OCCASIONNELS (traités comme sujet à part entière quand l'actualité le justifie) :
+- câbles sous-marins,
+- satellites.
+
+Registre d'ILLUSTRATION COMPLÉMENTAIRE — jamais un sujet, seulement une image :
+- voiliers, parapente, plongée, silhouettes de navires,
+- mer, profondeur, horizon.
+
+La mer est une MÉTAPHORE (profondeur, infrastructure invisible, observation), pas un
+programme éditorial. Retirés le 2026-08-02 : ports, routes maritimes, logistique
+portuaire, trafic maritime — hors périmètre de la chaîne.
 
 La marque doit évoquer :
 - calme,
@@ -3892,20 +3927,30 @@ Rule: 90% dark neutral tones, 10% muted cyan accents maximum.
 
 ## SUBJECT
 [INSERT SUBJECT]
-<!-- Exemples de sujets adaptés :
-  - "North Atlantic submarine cable network — AEConnect-1 route"
-  - "Port of Rotterdam as global logistics node — aerial infrastructure view"
+<!-- Exemples de sujets adaptés — le SUJET vient du périmètre éditorial de la
+     chaîne : cybersecurity, cloud architecture, AI agents, technology foresight.
+  - "Autonomous agent escaping its sandbox — abstract containment diagram"
   - "BGP routing failure cascade — abstract network diagram"
   - "Hyperscaler datacenter geography — Atlantic coast"
-  - "Submarine cable landing station on a foggy coastline"
-  - "Maritime traffic density map — Strait of Malacca"
+  - "Identity federation across cloud providers — trust boundary map"
+  - "Agentic loop as a self-correction device — iteration timeline"
+  - "Technical debt accumulating without a line of code changing"
+
+     Sujets OCCASIONNELS, admis quand l'actualité le justifie :
+  - "North Atlantic submarine cable network — abstract route topology"
+  - "Low-earth-orbit satellite constellation — coverage geometry"
+
+     JAMAIS un sujet : ports, routes maritimes, logistique portuaire, trafic
+     maritime. Retirés le 2026-08-02 — hors périmètre de la chaîne.
 -->
 
 ## OPTIONAL ELEMENTS
-Use only elements relevant to the subject:
-Sonar circles · maritime routes · underwater cables · radar geometry · navigation markers
-ocean currents · abstract cloud infrastructure · port cranes · vessel silhouettes
-coordinate grids · depth contours · signal paths
+Use only elements relevant to the subject. These are ILLUSTRATION, never the subject:
+Sonar circles · radar geometry · navigation markers · coordinate grids · depth contours
+signal paths · ocean currents · underwater cables · satellite orbits
+abstract cloud infrastructure · network meshes · architecture diagrams
+sailing boats · paragliding · diving · vessel silhouettes · sea surface · horizon
+NEVER: port cranes, container terminals, shipping lanes, maritime logistics.
 
 ## NEGATIVE PROMPT
 <!-- Inclure dans les outils qui supportent les negative prompts (Midjourney, Flux, SD) -->

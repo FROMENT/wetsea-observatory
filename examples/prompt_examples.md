@@ -4,16 +4,15 @@ Create a premium cinematic YouTube thumbnail for a documentary-style video about
 
 The thumbnail must visually represent:
 - invisible systems,
-- global infrastructures,
-- maritime networks,
+- cybersecurity and trust boundaries,
+- cloud architectures,
+- AI agents and their control planes,
 - technical exploration,
-- geopolitical flows,
-- oceanic intelligence,
-- cloud systems,
-- submarine cables,
-- ports,
+- forward-looking analysis,
 - signals,
 - modern technological ecosystems.
+
+Occasionally (not by default): submarine cables, satellites.
 
 STYLE:
 A subtle fusion of:
@@ -38,19 +37,23 @@ COMPOSITION:
 - atmospheric depth.
 
 VISUAL ELEMENTS:
-Use only elements relevant to the topic:
-- maritime routes,
-- submarine cables,
+Use only elements relevant to the topic. These are ILLUSTRATION, never the subject:
 - radar circles,
-- ports,
+- sonar geometry,
 - datacenters,
+- abstract cloud infrastructure,
+- network meshes and architecture diagrams,
+- submarine cables,
 - satellites,
 - ocean currents,
+- depth contours,
 - technical diagrams,
 - navigation markers,
 - signal geometry,
-- infrastructure maps,
-- cloud systems.
+- sailing boats, paragliding, diving, vessel silhouettes,
+- sea surface, horizon.
+
+NEVER: port cranes, container terminals, shipping lanes, maritime logistics.
 
 COLOR PALETTE:
 <!-- Source canonique : design_tokens.yaml — ne pas modifier ces valeurs ici -->

@@ -54,12 +54,16 @@
 
 ## Éléments visuels récurrents
 
-Privilégier selon le sujet :
-- Routes maritimes et lignes de câbles
-- Cercles radar / sonar
-- Grilles d'infrastructure, cartes de réseau
-- Ports, terminaux, relais
+Privilégier selon le sujet. Ces éléments illustrent, ils ne sont pas le sujet :
+- Cercles radar / sonar, géométrie de signal
+- Grilles d'infrastructure, cartes de réseau, diagrammes d'architecture
+- Frontières de confiance, plans de contrôle abstraits
+- Lignes de câbles sous-marins, orbites de satellites (sujets occasionnels)
+- Voiliers, parapente, plongée, silhouettes de navires, surface de mer, horizon
 - Superpositions tactiques et données abstraites
+
+Jamais : ports, terminaux à conteneurs, grues portuaires, routes maritimes,
+logistique portuaire.
 
 ---
 

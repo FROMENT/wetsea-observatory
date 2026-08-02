@@ -26,7 +26,7 @@
 ### Format A — Fait opérationnel
 Structure : [Sujet concret] + [conséquence ou échelle mesurable]
 ```
-Ce port traite 15 millions de conteneurs. Sans que personne ne le voie.
+Ce modèle traite 15 millions de requêtes par jour. Sans journal d'audit.
 400 câbles sous-marins font tenir l'internet mondial.
 Un câble coupé en mer Rouge : ce qui se passe en 48 heures.
 ```
@@ -36,7 +36,7 @@ Structure : [Affirmation contre-intuitive] + [précision]
 ```
 Le cloud est physique. Voici où il se trouve vraiment.
 Internet n'est pas dans les airs. Il est sous l'eau.
-Ces routes n'existent pas sur les cartes. Elles transportent 95% du trafic mondial.
+Ces dépendances n'apparaissent dans aucun inventaire. Elles portent toute la chaîne.
 ```
 
 ### Format C — Question analytique (usage modéré)
@@ -52,7 +52,7 @@ Structure : [Événement réel] + [angle analytique]
 ```
 Quand un câble sous-marin se coupe : anatomie d'une coupure réseau.
 La panne BGP de 2021 : comment Facebook a disparu d'internet.
-Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale.
+xz/liblzma : la porte dérobée qui a failli entrer dans toutes les distributions.
 ```
 
 ---
@@ -61,7 +61,7 @@ Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale
 
 - Placer le mot-clé principal dans les **40 premiers caractères**
 - Mots-clés prioritaires WetSea Observatory :
-  `câbles sous-marins · infrastructure maritime · port · datacenter · réseau internet · logistique · BGP · cloud`
+  `cybersécurité · architecture cloud · agents IA · Zero Trust · datacenter · réseau internet · BGP · câbles sous-marins`
 - Utiliser les termes techniques précis plutôt que leurs équivalents génériques
   (préférer "câble sous-marin" à "internet" ; "nœud BGP" à "réseau")
 - Ne pas utiliser de hashtags dans le titre (les mettre en description)
@@ -83,7 +83,7 @@ Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale
 
 | Miniature montre | Titre doit |
 |---|---|
-| Sujet visuel fort (câble, port) | Donner l'angle analytique, pas redécrire l'image |
+| Sujet visuel fort (câble, topologie) | Donner l'angle analytique, pas redécrire l'image |
 | Texte court (2–4 mots) | Développer et préciser |
 | Sujet abstrait (réseau, données) | Ancrer dans le concret (chiffre, lieu, événement) |
 
@@ -96,10 +96,10 @@ Suez bloqué : 6 jours qui ont révélé la fragilité de la logistique mondiale
 - `Quand un câble sous-marin se coupe : ce qui se passe vraiment`
 - `AEConnect-1 : la route secrète entre New York et Dublin`
 
-**Ports et logistique**
-- `Rotterdam : comment le plus grand port d'Europe fonctionne`
-- `Un conteneur perdu en mer : ce que ça révèle sur la logistique mondiale`
-- `Détroit de Malacca : 40% du commerce maritime mondial en 2,7 km`
+**Agents IA et gouvernance**
+- `Un agent IA avec des droits d'admin : ce que ça ouvre vraiment`
+- `MCP : le protocole qui donne des mains aux modèles`
+- `Autoriser un projet IA : les 7 points qui bloquent en vrai`
 
 **Cloud et datacenters**
 - `Où se trouve vraiment le cloud ? Une géographie physique`

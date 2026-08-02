@@ -1,14 +1,16 @@
 # WetSea Observatory — Agent Rules
 
 WetSea Observatory is a premium editorial visual identity system focused on:
-- oceans,
-- invisible infrastructures,
-- submarine cables,
-- maritime systems,
-- ports,
+- cybersecurity,
 - cloud architecture,
-- signals,
-- global technical networks.
+- AI agents and autonomous systems,
+- technology foresight,
+- invisible infrastructures,
+- contemporary technical systems.
+
+Occasional subjects: submarine cables, satellites.
+Complementary illustration only, never subject: sailing boats, paragliding,
+diving, vessel silhouettes, sea and depth.
 
 The aesthetic must feel:
 - calm,

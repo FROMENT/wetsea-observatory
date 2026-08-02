@@ -8,14 +8,24 @@
 ## IDENTITÉ
 
 WetAndSeaAI / WetSeaTech explore :
-- océans,
-- infrastructures invisibles,
-- réseaux mondiaux,
-- ports,
-- routes maritimes,
-- câbles sous-marins,
+- cybersécurité,
 - architectures cloud,
+- agents IA et systèmes autonomes,
+- prospective technologique,
+- infrastructures invisibles,
 - systèmes techniques contemporains.
+
+Sujets OCCASIONNELS (traités comme sujet à part entière quand l'actualité le justifie) :
+- câbles sous-marins,
+- satellites.
+
+Registre d'ILLUSTRATION COMPLÉMENTAIRE — jamais un sujet, seulement une image :
+- voiliers, parapente, plongée, silhouettes de navires,
+- mer, profondeur, horizon.
+
+La mer est une MÉTAPHORE (profondeur, infrastructure invisible, observation), pas un
+programme éditorial. Retirés le 2026-08-02 : ports, routes maritimes, logistique
+portuaire, trafic maritime — hors périmètre de la chaîne.
 
 La marque doit évoquer :
 - calme,

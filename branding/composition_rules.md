@@ -7,7 +7,7 @@
 
 ## Depth Strategy
 1. Base layer: map or infrastructure context.
-2. Mid layer: technical object (cable, buoy, port crane, vessel track).
+2. Mid layer: technical object (submarine cable, satellite, buoy, rack, vessel silhouette).
 3. Top layer: concise annotations and title.
 
 ## Motion & Framing

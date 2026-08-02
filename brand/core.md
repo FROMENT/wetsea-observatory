@@ -33,7 +33,8 @@ Un observatoire éditorial et technique qui documente les systèmes invisibles e
 - maintenir une direction artistique cohérente entre les canaux
 
 **Périmètre thématique :**
-- océans, routes maritimes, ports
+- cybersécurité, architectures cloud, agents IA, prospective
+- mer et profondeur comme registre visuel, jamais comme sujet
 - câbles sous-marins, réseaux globaux
 - architectures cloud, systèmes techniques contemporains
 - infrastructures invisibles et dépendances opérationnelles
@@ -86,7 +87,7 @@ Fusion subtile de :
 ## Composants d'identité visuelle
 
 - Textures cartographiques océaniques
-- Sujets infrastructure (câbles, ports, terminaux, navires)
+- Sujets infrastructure (câbles sous-marins, satellites, datacenters, réseaux)
 - Graphiques signal (vecteurs, marqueurs temporels, IDs)
 - Hiérarchie typographique retenue
 - Espace négatif comme élément structurel
