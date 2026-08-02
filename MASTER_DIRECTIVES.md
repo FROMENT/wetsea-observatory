@@ -1,6 +1,6 @@
 # WST Observatory — Directives Consolidées
 
-> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:39:59Z
+> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:52:37Z
 > Source : https://github.com/FROMENT/wetsea-observatory
 > **Ne pas éditer ce fichier manuellement** — il est régénéré à chaque push.
 
@@ -1533,10 +1533,21 @@ Le système doit rester cohérent pour :
 
 ---
 
-## Slogans approuvés
+## Baseline canonique
 
-> Reading Invisible Systems · Observe The Current · Signals Across Oceans
-> Between Sea And Signal · Quiet Systems · Technical Cartographies · Routes Beneath The Surface
+> **Reading Invisible Systems** (EN) · **Lire les systèmes invisibles** (FR)
+
+Baseline unique, arrêtée le 2026-08-02. Elle s'affiche toujours SOUS la marque,
+jamais à sa place. Aucune troisième variante.
+Source canonique : `design_tokens.yaml`, bloc `canonical_names.baseline`.
+
+## Slogans de campagne
+
+Utilisables ponctuellement en accroche ou en légende. Ils ne tiennent **pas** lieu
+de baseline et ne se substituent jamais à celle ci-dessus.
+
+> Observe The Current · Signals Across Oceans · Between Sea And Signal
+> Quiet Systems · Technical Cartographies · Routes Beneath The Surface
 
 ---
 
@@ -3754,7 +3765,10 @@ Les designs doivent fonctionner pour :
 Courts, élégants, contemplatifs.
 
 Exemples :
-- Reading Invisible Systems
+Baseline canonique (2026-08-02) — source : `design_tokens.yaml` :
+- **Reading Invisible Systems** (EN) / **Lire les systèmes invisibles** (FR)
+
+Slogans de campagne, jamais en position de baseline :
 - Observe The Current
 - Signals Across Oceans
 - Between Sea And Signal

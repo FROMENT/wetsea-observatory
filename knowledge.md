@@ -164,7 +164,10 @@ Les designs doivent fonctionner pour :
 Courts, élégants, contemplatifs.
 
 Exemples :
-- Reading Invisible Systems
+Baseline canonique (2026-08-02) — source : `design_tokens.yaml` :
+- **Reading Invisible Systems** (EN) / **Lire les systèmes invisibles** (FR)
+
+Slogans de campagne, jamais en position de baseline :
 - Observe The Current
 - Signals Across Oceans
 - Between Sea And Signal

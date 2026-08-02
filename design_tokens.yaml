@@ -26,6 +26,17 @@ canonical_names:
     - "WetAndSeaAI"
     - "WST NETWORK"
     - "WST Labs"
+  baseline:
+    en: "Reading Invisible Systems"
+    fr: "Lire les systemes invisibles"
+    rule: "Baseline canonique unique, arretee le 2026-08-02. Elle s'affiche toujours
+      SOUS la marque, jamais a sa place. Version FR sur surfaces francophones, EN sur
+      surfaces anglophones. Aucune troisieme variante, y compris en legende de
+      miniature. Les sept slogans de brand/core.md sont retrogrades en slogans de
+      campagne et ne tiennent plus lieu de baseline."
+    superseded: "Between You and the Signal — portee par les hooks produits avant le
+      2026-08-02, jamais inscrite au referentiel. Remplacee, pas reenregistree : les
+      assets existants restent en place jusqu'a leur renouvellement naturel."
   note: >
     'Wet & Sea AI' est la seule marque affichee au public, dans toutes les langues.
     'WetSea Observatory' designe le design system, pas la marque.
