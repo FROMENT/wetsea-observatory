@@ -1,6 +1,6 @@
 # WST Observatory — Directives Consolidées
 
-> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:32:24Z
+> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:39:59Z
 > Source : https://github.com/FROMENT/wetsea-observatory
 > **Ne pas éditer ce fichier manuellement** — il est régénéré à chaque push.
 
@@ -241,12 +241,12 @@ design_tokens.yaml  >  brand/core.md  >  fichiers de canal  >  autres fichiers
 | Cover podcast | `channels/podcast.md` |
 | Script / narration vidéo | `notebooklm/directives.md` |
 | Mascotte | `brand/mascot.md` (voir `design_tokens.yaml` section mascots) |
-| Contenu cyber/WetSeaTech | `brand/wetseatech_program.md` |
+| Contenu cyber / cloud / agents IA | `brand/wetseatech_program.md` |
 | Hook CLAC | `frameworks/clac.md` |
 | Prompt d'illustration général | `prompts/master_prompt.md` |
 
-> Utiliser `design_tokens.yaml` comme source de palette et `brand/wetseatech_program.md`
-> comme adaptateur contextuel. `#5E8FA3` reste l'accent cyan canonique.
+> `design_tokens.yaml` est l'unique source de palette. `#5E8FA3` est le seul accent
+> cyan. `brand/wetseatech_program.md` adapte la densité technique, pas les couleurs.
 
 ---
 
@@ -303,7 +303,7 @@ maintenance/                Migration, audits et historique opérationnel
 
 ---
 
-*Dernière mise à jour : 2026-05-22*
+*Dernière mise à jour : 2026-08-02*
 
 ---
 
@@ -1083,6 +1083,280 @@ P-01 · P-02 · P-03 · P-04 · P-05 · P-06 · P-08 · P-09 — tous corrigés.
 
 ---
 
+# Révision du 2026-08-02
+
+> **Statut du rapport.** Le corps ci-dessus date de mai 2026 et reste un document
+> daté : il n'est pas réécrit. Cette révision constate ce que deux décisions du
+> 2026-08-02 ont changé, résolu, ou laissé ouvert.
+>
+> **Décision 1 — recentrage éditorial.** Sujets principaux : cybersécurité,
+> architectures cloud, agents IA, prospective. Occasionnels : câbles sous-marins,
+> satellites. Illustration complémentaire jamais sujet : voiliers, parapente,
+> plongée, silhouettes de navires, mer, horizon. Retirés : ports, terminaux à
+> conteneurs, grues portuaires, routes maritimes, logistique portuaire.
+>
+> **Décision 2 — architecture de marque.** Marque publique unique, graphie unique
+> toutes langues : `Wet & Sea AI` (domaine `wetandseaai.fr`). `WetSea Observatory`
+> = design system, interne. `WetSeaTech` = boutique Etsy endossée, sans identité
+> visuelle propre. `WST` = couche technique interne. Proscrits : `Wet & Sea & IA`,
+> `WetAndSeaAI`, `WST NETWORK`, `WST Labs`. Palette `color.extension_wetseatech`
+> retirée. Dépôt non renommé.
+>
+> **Méthode.** Deux revues indépendantes — axe design system, axe architecture de
+> marque — menées sur l'état du dépôt après application. Les ratios de contraste
+> du §3 ont été recalculés indépendamment (luminance relative WCAG 2.1) et
+> vérifiés une seconde fois avant publication.
+>
+> Convention : **[F]** fait vérifié · **[I]** inférence · **[R]** recommandation.
+
+## Révision du 2026-08-02 — axe design system
+
+### 1. Statut des défauts P-01 à P-10
+
+| ID | Intitulé court | Statut | Justification vérifiée |
+|---|---|---|---|
+| **P-01** | Palette fragmentée (3 jeux hex conflictuels) | **Résolu** | [F] `design_tokens.yaml:1-10` s'auto-déclare source de vérité unique ; `#00D4FF` est listé en `color.forbidden` (`design_tokens.yaml:81-82`) ; le second jeu de tokens, cause racine, a été retiré (`design_tokens.yaml:70-77`) et les consommateurs citent les mêmes hex (`prompts/master_prompt.md:16-19`, `channels/youtube.md:44-51`, `brand/core.md:88`). |
+| **P-02** | Typographie sans noms de fontes | **Résolu** | [F] Trois familles nommées, avec alternatives, fallback système et mot-clé de prompt IA : `design_tokens.yaml:97-143` ; hiérarchie H1/H2/body/captions en `:146-166`. |
+| **P-03** | Point d'entrée ambigu (6 fichiers « maîtres ») | **Résolu** | [F] `START_HERE.md:3-4` se déclare point d'entrée unique ; `START_HERE.md:17-20` fixe la hiérarchie de résolution de conflit, reprise en `brand/core.md:5`. |
+| **P-04** | Divergence de personnalité WetSea / WetSeaTech | **Résolu (structurellement)** | [F] `brand/wetseatech_program.md:1` requalifie le fichier en « Ligne cyber — Program Adapter » ; `:14-27` supprime le statut de sous-marque ; `:57` impose la palette principale comme unique. Résidus de ton : voir axe marque, §2. |
+| **P-05** | Spec mascotte fragmentée | **Toujours ouvert** | [F] `design_tokens.yaml:261-285` consolide archétypes, style et interdits, mais `knowledge.md:101-128` conserve une seconde spec autonome qui le contredit : `knowledge.md:122` demande des mascottes « mobiles » là où `design_tokens.yaml:276` impose « Static or minimally expressive ». |
+| **P-06** | Listes « interdit » dupliquées | **Toujours ouvert** | [F] Le renvoi unique existe (`brand/core.md:166`, `channels/youtube.md:87`, `prompts/master_prompt.md:50`), mais deux listes complètes survivent en dur : `knowledge.md:42-55` et `brand_guidelines.md:29-34`. Passage de 10+ exemplaires à 3. |
+| **P-07** | Dossier `assets/` vide | **Non vérifiable** | [F] Seule trace : `START_HERE.md:74` annonce une gouvernance d'assets à documenter. Le dossier n'était pas dans le périmètre de la revue. |
+| **P-08** | `docs/system_prompts.md` stub | **Non vérifiable** | [I] `START_HERE.md:54-76` ne liste plus de dossier `docs/`, ce qui suggère une suppression — mais `docs/visual_identity.md` existe, ce qui affaiblit l'inférence. |
+| **P-09** | Naming rule violée dans les fichiers qui la définissent | **Résolu par effet de bord** | [F] La refonte du 2026-08-02 a supprimé les H1 fautifs : `brand_guidelines.md:1`, `prompts/master_prompt.md:1`, `knowledge.md:1` portent « Wet & Sea AI ». Corrigé comme conséquence de la décision 2, pas pour P-09. Résidus : N-05 ci-dessous et axe marque §2. |
+| **P-10** | Absence de spec espacement digital | **Résolu** | [F] `design_tokens.yaml:190-196` définit gutters et marges desktop/mobile plus une largeur de contenu max ; `:252-256` ajoute le format `blog_editorial`. |
+
+### 2. Défauts nouveaux ou résiduels
+
+| ID | Description | Fichier:ligne | Sévérité | Correction |
+|---|---|---|---|---|
+| **N-01** | Le tableau de composition de miniature cite `port` comme sujet technique principal, alors que la même page interdit les ports 41 lignes plus bas. | `channels/youtube.md:24` vs `:65-66` | Critique | Remplacer par « câble, satellite, topologie réseau, datacenter ». |
+| **N-02** | `WetSeaTech` encore employé comme label de contenu éditorial cyber, alors qu'il ne désigne plus que la boutique Etsy. | `START_HERE.md:33` | Majeur | Renommer l'entrée « Contenu cyber / cloud / agents IA ». |
+| **N-03** | `knowledge.md` est orphelin de l'arborescence de référence et porte une palette en texte libre, une liste d'interdits dupliquée et une spec mascotte contradictoire. Un agent qui le charge seul reçoit un système périmé. | `knowledge.md:1-173`, absent de `START_HERE.md:54-76` | Majeur | Marquer LEGACY ou remplacer `:79-128` par des renvois. |
+| **N-04** | La vision de marque reste ancrée sur « les infrastructures maritimes », registre rétrogradé au rang d'illustration. | `brand/core.md:33` | Majeur | Réécrire sur cyber / cloud / agents IA / infrastructures numériques invisibles. |
+| **N-05** | Le nom du design system sert de nom de marque dans trois déclarations d'identité. | `docs/visual_identity.md:4`, `brand/core.md:76`, `brand/wetseatech_program.md:99` | Modéré | Substituer « Wet & Sea AI ». |
+| **N-06** | Le template de description YouTube impose des tags maritimes par défaut. | `channels/youtube.md:122` | Modéré | `#cybersécurité #cloud #agentsIA #[sujet]` ; `#câblessousmarins` réservé aux sujets occasionnels. |
+| **N-07** | « signalétique portuaire » subsiste dans l'ADN visuel. [I] Registre d'inspiration graphique, pas sujet — mais appartient à la famille retirée. | `brand/core.md:69`, `knowledge.md:64` | Modéré | Supprimer ou requalifier « signalétique technique et navale (inspiration, jamais sujet) ». |
+| **N-08** | `VLCC` donné en exemple d'acronyme autorisé — vocabulaire de trafic maritime. | `channels/youtube_titles.md:78` | Mineur | Remplacer par BGP, MCP, IETF. |
+| **N-09** | Dates de dernière mise à jour périmées dans les deux fichiers d'autorité, qui portent pourtant la décision du 2026-08-02. Un agent qui arbitre par date lit la décision comme antérieure à elle-même. | `design_tokens.yaml:8`, `START_HERE.md:95` | Mineur | Passer à `2026-08-02`. |
+| **N-10** | Renvoi devenu inutile : `wetseatech_program.md` désigné comme « adaptateur contextuel » de palette alors qu'il déclare la palette unique. | `START_HERE.md:37-38` | Mineur | Réduire à « `design_tokens.yaml` est l'unique source de palette ». |
+| **N-11** | Bloc terminal dégradé : titre orphelin, préfixe `WST PRIORITY RULE` en position d'autorité éditoriale, puce mal formée. | `brand_guidelines.md:47-50` | Mineur | Supprimer (fichier déjà LEGACY) ; la règle existe en `brand/core.md:86`. |
+
+[F] Aucun renvoi mort vers `color.extension_wetseatech`, `#07101A`, `#1E3A5F`,
+`WST NETWORK`, `WST Labs`, `Wet & Sea & IA` ou `WetAndSeaAI` n'a été trouvé : le
+retrait a été propagé proprement. `#94A3B8` n'apparaît plus qu'en
+`design_tokens.yaml:67`, conformément à la note `:76-77`.
+
+### 3. Accessibilité de la palette restante — recalcul
+
+[F] Méthode : luminance relative WCAG 2.1 (linéarisation sRGB, seuil 0,04045,
+exposant 2,4 ; coefficients 0,2126 / 0,7152 / 0,0722), puis
+`(L_clair + 0,05) / (L_sombre + 0,05)`. Calcul effectué deux fois, de façon
+indépendante, avant publication.
+
+| Couple | Ratio calculé | Ratio annoncé | Verdict |
+|---|---|---|---|
+| `off-white #F2F1EC` sur `deep-navy #0A1A2B` | **15,53:1** | 13,8:1 (`design_tokens.yaml:59`, `:91`) | Annonce fausse — conclusion AAA inchangée |
+| `mineral-sand #C9BDA8` sur `deep-navy` | **9,48:1** | 7,2:1 (`:63`) | Annonce fausse — AAA en réalité, pas AA |
+| `muted-cyan #5E8FA3` sur `deep-navy` | **4,96:1** | 3,1:1, « AA large only » (`:54`) | Annonce fausse **et** restriction erronée : passe AA texte courant |
+| `deep-navy` sur blanc `#FFFFFF` | **17,57:1** | 14,2:1 (`:46`) | Annonce fausse — AAA confirmé |
+| `muted-cyan` sur `mineral-sand` | **1,91:1** | avertissement sans valeur (`:55`) | Avertissement fondé — échec net |
+| `off-white` sur `graphite #2A2F36` | **11,92:1** | non annoncé | AAA |
+| `mineral-sand` sur `graphite` | **7,27:1** | non annoncé | AAA large / AA courant |
+| `muted-cyan` sur `graphite` | **3,81:1** | non annoncé | AA texte large uniquement |
+| `off-white` sur `dark-ocean-green #1D3A3A` | **10,80:1** | non annoncé | AAA |
+| `muted-cyan` sur `dark-ocean-green` | **3,45:1** | non annoncé | AA texte large uniquement |
+| `off-white` sur `mineral-sand` | **1,64:1** | non annoncé | À proscrire explicitement |
+
+[F] Les quatre ratios chiffrés du fichier de tokens sont faux, et de façon
+systématique : ils sous-estiment le contraste réel.
+
+[I] L'origine probable est un report croisé. `3,1:1` correspond exactement au
+couple `muted-cyan` sur `off-white` (**3,13:1** calculé) et `7,2:1` au couple
+`mineral-sand` sur `graphite` (**7,27:1** calculé) : les valeurs ont
+vraisemblablement été attribuées au mauvais fond lors de la rédaction.
+
+[F] Conséquence opérationnelle : la restriction de `design_tokens.yaml:54`
+interdit sans raison le `muted-cyan` pour du texte courant sur `deep-navy` alors
+qu'il satisfait AA. À l'inverse, aucun garde-fou n'existe pour les deux couples
+réellement limités — `muted-cyan` sur `graphite` (3,81:1) et sur
+`dark-ocean-green` (3,45:1), tous deux texte large uniquement.
+
+### 4. Recommandations — axe design system
+
+**[R] R-1 — Corriger le bloc contraste de `design_tokens.yaml` (30 min, valeur
+élevée).** Remplacer les quatre ratios erronés (lignes 46, 54, 59, 63, 91) par les
+valeurs recalculées et ajouter les deux couples limités au texte large. C'est le
+seul endroit du dépôt où une donnée chiffrée fausse est présentée comme faisant
+autorité — et elle est recopiée telle quelle par les fichiers de canal.
+
+**[R] R-2 — Purger les six résidus de vocabulaire périmé en une passe (45 min,
+valeur élevée).** N-01, N-02, N-04, N-06, N-07 et N-08 sont des occurrences
+textuelles isolées à correction mécanique. N-01 est un cas où le fichier se
+contredit à 41 lignes d'intervalle : tant qu'il subsiste, un agent qui lit un seul
+fichier de canal peut légitimement produire un visuel de port.
+
+**[R] R-3 — Statuer sur les quatre fichiers hors arborescence (1 h, valeur
+moyenne).** `knowledge.md`, `brand_guidelines.md`, `docs/visual_identity.md` et
+`branding/composition_rules.md` ne figurent pas dans la structure déclarée en
+`START_HERE.md:54-76` alors que `brand/core.md:9-10` affirme les avoir consolidés.
+Ils portent les derniers doublons de palette, d'interdits et de spec mascotte :
+P-05 et P-06 ne restent ouverts qu'à cause d'eux.
+
+## Révision du 2026-08-02 — axe architecture de marque
+
+> Les affirmations portant sur les propriétés hors dépôt (site Hugo, YouTube,
+> Etsy, Ko-fi, Spotify, hook vidéo) proviennent de la décision et d'une lecture
+> directe des sites publics ; elles ne sont pas vérifiables dans le dépôt.
+
+### 1. Schéma d'architecture de marque
+
+[F] Schéma déclaré en `design_tokens.yaml:15-33`, repris à l'identique dans
+`brand/core.md:14-25`, `brand_guidelines.md:8-15`, `START_HERE.md:84-91` et
+`knowledge.md:3-7`. Les cinq déclarations sont cohérentes entre elles.
+
+| Niveau | Nom | Rôle | Où il apparaît | Jamais |
+|---|---|---|---|---|
+| Marque maîtresse | **Wet & Sea AI** | Seule marque publique, graphie unique toutes langues (`design_tokens.yaml:16-17`) | Site `wetandseaai.fr`, YouTube, covers podcast, descriptions Etsy, Ko-fi, Spotify | — nom par défaut partout |
+| Endossée (produit) | **WetSeaTech** | Boutique Etsy, « WetSeaTech, la boutique de Wet & Sea AI ». Aucune identité visuelle propre (`:20-21`, `brand/wetseatech_program.md:21-23`) | Nom et URL de boutique, mention secondaire produit | Chaîne YouTube, site, podcast, miniatures, palette dédiée |
+| Endossée (média) | **wst-tech.org** | Site de veille endossé, sous signature Wet & Sea AI (`:23`, `brand_guidelines.md:14`) | Le domaine reste servi, le contenu porte la marque maîtresse | Marque autonome dans le titre ou le pied de page |
+| Interne (technique) | **WST** | Dépôts, préfixes `wst_`, Workers, environnements (`:23`, `START_HERE.md:90`) | Code, branches, infra, docs internes | Toute surface publique |
+| Interne (design) | **WetSea Observatory** | Nom du design system (`:14`, `brand/core.md:18`) | Fichiers du dépôt, prompts d'agents, doc de production | Tout output destiné à une audience |
+| Proscrits | Wet & Sea & IA · WetAndSeaAI · WST NETWORK · WST Labs | Graphies retirées (`:24-28`) | — | Partout, y compris interne |
+
+### 2. Statut des défauts de nommage et de personnalité
+
+[F] L'audit d'origine classait P-04 et P-09 « corrigés » dès la v1.0
+(`UX_AUDIT_REPORT.md:462`) tout en laissant la décision de fond ouverte en Phase 3
+(`:226-233`). Cette auto-déclaration était prématurée : la décision stratégique
+n'était pas prise à la date du rapport.
+
+| Défaut | Objet | Statut | Justification |
+|---|---|---|---|
+| **P-04** | Divergence de personnalité | **Partiellement résolu** | [F] Cause racine traitée : sous-marque dissoute (`brand/wetseatech_program.md:16-23`), second jeu de tokens retiré (`design_tokens.yaml:70-77`), fichier requalifié en adaptateur de densité (`:18-19`). [F] Résidus : le ton « légèrement plus tendu que le registre général » (`brand/wetseatech_program.md:46`) est exactement la « Tonalité B » que P-04 signalait, désormais légitimée ; et la checklist anti-drift exige un contenu « identifiable comme WetSea Observatory » (`:99`), ce qui redonne au design system un rôle de personnalité de marque. |
+| **P-09** | Naming rule violée là où elle est définie | **Partiellement résolu** | [F] H1 corrigés (`brand_guidelines.md:1`, `knowledge.md:1`, `prompts/master_prompt.md:1`). [F] Le nom interne sert encore de titre et de qualificatif éditorial : `channels/youtube.md:1`, `channels/youtube_titles.md:1`, `:4`, `:63`, `brand/core.md:76`, `docs/visual_identity.md:4`. Un agent qui lit `channels/youtube_titles.md` seul en déduit que la marque s'appelle WetSea Observatory. |
+| **P-11** | Naming rule dans `master_prompt.md` | **Résolu** | [F] `prompts/master_prompt.md:1` et `:4` séparent marque et design system ; les hex sont présents (`:17-19`). |
+| **P-06** | Duplication des règles | **Ouvert, aggravé sur l'axe nommage** | [F] La règle de nommage est recopiée dans cinq fichiers, chacun portant un commentaire « ne pas dupliquer » tout en dupliquant. [I] Cohérent aujourd'hui : risque de dérive future, pas défaut actif. |
+| Hors audit | Cohérence du recentrage | **Ouvert** | [F] (a) `channels/youtube.md:24` prescrit « port » onze lignes avant de l'interdire (`:65-66`). (b) `brand/core.md:43` liste « câbles sous-marins, réseaux globaux » sans les marquer occasionnels, là où `knowledge.md:19-22` les classe explicitement ainsi. (c) `channels/youtube.md:122` impose `#submarinecables #maritime #infrastructure` par défaut. |
+
+[F] Non vérifiés faute de fichiers dans le périmètre de la revue :
+`brand/forbidden.md`, `brand/editorial_voice.md`, `brand/mascot.md`,
+`channels/etsy.md`, `channels/podcast.md`, `frameworks/clac.md`,
+`notebooklm/directives.md`, `AGENTS.md`. `notebooklm/directives.md` était l'un des
+vecteurs identifiés de P-04.
+
+### 3. Risques résiduels de l'architecture retenue
+
+**a. Deux domaines vivants pour une seule marque.** `wetandseaai.fr` et
+`wst-tech.org` publient tous deux du contenu éditorial : autorité SEO, backlinks
+et audience se répartissent sur deux racines, et un visiteur arrivant sur le
+second n'a aucun signal que le premier existe. L'endossement n'est pas
+auto-évident : sans marquage explicite, deux sites lisent comme deux marques —
+exactement ce que la décision voulait supprimer.
+*Traitement le moins coûteux :* bandeau d'endossement en en-tête de
+`wst-tech.org` (« Veille — Wet & Sea AI ») et lien canonique unique vers
+`wetandseaai.fr` en pied de page. Une modification de template Hugo, sans
+migration de contenu.
+
+**b. Baseline site ≠ baseline vidéo ≠ périmètre éditorial.** « Like diving
+traveling coding love IA … » énumère des activités qui, dans le nouveau cadre,
+appartiennent au registre d'illustration et jamais au sujet (`knowledge.md:23-26`,
+`prompts/master_prompt.md:41-45`). Le hook vidéo porte « Between You and the
+Signal ». La première impression (créateur lifestyle-tech) contredit la
+proposition de valeur (observatoire cyber/cloud/IA).
+Point aggravant [F] : le dépôt ne désigne **aucune** baseline — il liste sept
+slogans d'égal statut (`brand/core.md:159-160`, `knowledge.md:166-173`), et
+« Between You and the Signal » n'y figure pas ; le plus proche est « Between Sea
+And Signal » (`brand/core.md:160`). Un asset déjà produit porte donc une formule
+hors référentiel.
+*Traitement le moins coûteux :* élire une baseline unique (§5), l'inscrire dans
+`design_tokens.yaml` à côté de `canonical_names`, rétrograder les six autres en
+slogans de campagne. Le hook déjà produit n'est pas réenregistré : il est traité
+comme legacy jusqu'à son remplacement naturel.
+
+**c. Nom de dépôt qui ne correspond plus à la marque.** `wetsea-observatory` porte
+le nom du design system — cohérent avec `design_tokens.yaml:14`, donc défendable.
+Conséquence réelle : les agents IA sont amorcés par le chemin du dépôt avant tout
+fichier, ce qui renforce la confusion déjà constatée en
+`channels/youtube_titles.md:4` et `brand/core.md:76`.
+*Traitement (renommage écarté) :* une ligne en tête de `START_HERE.md` explicitant
+que le nom du dépôt est celui du design system, et purge des six occurrences où le
+nom interne sert de qualificatif éditorial. Moins de 30 minutes.
+
+**d. Prononciation de « AI » en synthèse vocale française.** Trois pièges pour un
+TTS francophone : l'esperluette (lue « et » ou omise), « Sea » (risque de
+« séa »), et « AI » — lu « a-i », ou assimilé à « aïe », ou « corrigé » en « IA »
+par le modèle. Le nom est alors prononcé différemment d'une vidéo à l'autre et
+diverge de la graphie affichée : le bénéfice de la graphie unique s'annule là où
+il compte le plus, à l'oral, sur le canal principal.
+[F] `design_tokens.yaml:25` motive le rejet de « Wet & Sea & IA » par « se lit et
+se prononce mal », mais aucune forme orale de référence n'est prescrite pour la
+graphie retenue.
+*Traitement le moins coûteux :* fixer une forme orale canonique unique dans
+`design_tokens.yaml` sous `canonical_names` — proposition : **« Wett and Sea
+A.I. »** — avec alias SSML `<sub alias="ouette and si é i">` dans les outils qui
+le supportent, et mention en tête du template de script.
+
+**e. Asymétrie de gouvernance entre canaux.** `WetSeaTech` n'a « aucune identité
+visuelle propre » (`design_tokens.yaml:21`), mais aucune règle ne dit comment le
+nommer sur les visuels produits Etsy, où la plateforme affiche elle-même le nom de
+boutique en position de marque principale.
+*Traitement :* imposer la signature « Wet & Sea AI » sur chaque visuel produit, la
+boutique restant un libellé de plateforme.
+
+### 4. Plan d'alignement hors dépôt
+
+[R] Priorité décroissante. Efforts estimés.
+
+| # | Quoi | Où | Effort | Ce qui casse sinon |
+|---|---|---|---|---|
+| 1 | Graphie exacte `Wet & Sea AI` (en-tête, `<title>`, OG, pied de page) | Hugo `wetandseaai.fr` | 30 min | La marque de référence est elle-même hors norme ; la décision perd son ancrage |
+| 2 | Remplacer la baseline « Like diving traveling coding love IA … » par la baseline élue | Hugo `wetandseaai.fr` | 15 min | Promesse lifestyle sur un site d'expertise ; le recentrage n'est visible nulle part publiquement |
+| 3 | Retirer « Wet & Sea & IA », « WST NETWORK », « WST Labs » ; poser « Veille — Wet & Sea AI » | `wst-tech.org` | 1 h | Trois graphies proscrites restent publiquement affichées ; la marque lit comme deux entités |
+| 4 | Aligner nom de chaîne, bannière, description, lien « à propos » ; vérifier le handle `@DISCOVER-ALLIN360`, qui ne porte aucune trace de la marque | YouTube (2 chaînes) | 1–2 h | Le canal d'acquisition principal ne porte pas la marque ; handle non mémorisable, non recherchable |
+| 5 | Mention d'endossement en tête de description de boutique et sur chaque visuel produit | Etsy `wetseatech` | 30 min | La boutique lit comme une marque autonome ; l'audience YouTube ne fait pas le lien |
+| 6 | Aligner titre, avatar, présentation ; supprimer « WST » | Ko-fi | 15 min | Une page de soutien portant un nom interne ne convertit pas |
+| 7 | Aligner nom, cover, description ; forme orale canonique dans l'intro | Spotify | 30 min + cover | Prononciation différente à chaque épisode ; podcast non rattachable à la chaîne |
+| 8 | Unifier les liens sortants : chaque propriété pointe une fois vers `wetandseaai.fr` | Toutes | 30 min | L'audience circule latéralement sans atteindre le hub |
+| 9 | Corriger les résidus dépôt du §2 (N-01, N-04, N-06, dates) | Dépôt | 30 min | Les agents continuent de générer des visuels de port et des tags maritimes retirés |
+
+### 5. Baseline unique recommandée
+
+[R] Une seule baseline, une paire FR/EN figée, inscrite dans `design_tokens.yaml`
+au même niveau que `canonical_names`. Les sept slogans existants
+(`brand/core.md:159-160`) sont rétrogradés en slogans de campagne et ne peuvent
+plus tenir lieu de baseline.
+
+**Recommandée — « Lire les systèmes invisibles » / “Reading Invisible Systems”.**
+« Système » est le seul mot qui recouvre en une fois cyber, cloud, agents IA et
+prospective sans en nommer aucun ; « lire » installe la posture d'observatoire
+plutôt que d'opinion ; la formule est déjà dans le référentiel
+(`brand/core.md:159`), donc à coût de décision nul ; et ses deux formes se
+prononcent proprement dans chaque langue, sans mot piège.
+
+**Repli 1 — « Entre vous et le signal » / “Between You and the Signal”.** Coût
+zéro sur l'existant puisqu'un hook la porte déjà, mais elle décrit une posture
+relationnelle sans jamais dire de quoi la chaîne parle : à retenir seulement si la
+continuité des assets prime sur la lisibilité du périmètre.
+
+**Repli 2 — « Observer les systèmes qui décident » / “Watching the Systems That
+Decide”.** La seule des trois qui nomme implicitement les agents IA et la
+prospective — des systèmes qui décident, pas seulement qui transportent — au prix
+d'une longueur supérieure et d'une tonalité plus tendue que le registre calme
+prescrit par `brand/core.md:53-56`.
+
+[R] Règle d'usage commune : la baseline s'affiche toujours sous la marque, jamais
+à sa place ; version FR sur surfaces francophones, EN sur surfaces anglophones ;
+aucune troisième variante, y compris en légende de miniature.
+
+---
+
+*Révision du 2026-08-02 — deux revues indépendantes (design system, architecture
+de marque) sur l'état du dépôt après application des décisions. Ratios de
+contraste recalculés et vérifiés deux fois.*
+
+---
+
 <a id="source-assets-readme-md"></a>
 
 ## 📄 SOURCE: `assets/README.md`
@@ -1135,7 +1409,7 @@ docs/context.md, docs/visual_identity.md et branding/composition_rules.md. -->
 
 Un observatoire éditorial et technique qui documente les systèmes invisibles entre océans, infrastructures et signaux — avec une intelligence visuelle calme et cinématographique.
 
-**Vision :** construire une marque-observatoire éditoriale intemporelle autour des infrastructures maritimes et numériques invisibles.
+**Vision :** construire une marque-observatoire éditoriale intemporelle autour de la cybersécurité, des architectures cloud, des agents IA et des infrastructures numériques invisibles.
 
 **Stratégie :**
 - publier des visuels de confiance avec une autorité documentaire
@@ -1145,7 +1419,7 @@ Un observatoire éditorial et technique qui documente les systèmes invisibles e
 **Périmètre thématique :**
 - cybersécurité, architectures cloud, agents IA, prospective
 - mer et profondeur comme registre visuel, jamais comme sujet
-- câbles sous-marins, réseaux globaux
+- câbles sous-marins, satellites, réseaux globaux (sujets OCCASIONNELS)
 - architectures cloud, systèmes techniques contemporains
 - infrastructures invisibles et dépendances opérationnelles
 
@@ -1171,7 +1445,7 @@ Fusion subtile de :
 - design éditorial japonais
 - architecture moderniste
 - instrumentation scientifique
-- signalétique portuaire
+- signalétique technique et navale (inspiration graphique, jamais sujet)
 - aviation/naval technique
 - manga adulte minimaliste
 - documentaire contemporain
@@ -2186,7 +2460,7 @@ En complément de `brand/forbidden.md` :
 | Couche | Contenu |
 |---|---|
 | Fond | Contexte cartographique ou infrastructurel (deep navy base) |
-| Milieu | Sujet technique principal (câble, port, radar, infrastructure) |
+| Milieu | Sujet technique principal (topologie réseau, datacenter, câble, satellite) |
 | Premier plan | Texte titre (3–6 mots) + sous-label optionnel |
 
 - Composition asymétrique — sujet ancré aux tiers, jamais centré
@@ -2284,7 +2558,7 @@ Template minimal :
 [Liens sources primaires]
 
 — TAGS —
-#submarinecables #maritime #infrastructure #[sujet]
+#cybersécurité #cloud #agentsIA #[sujet]
 ```
 
 ---
@@ -2415,7 +2689,7 @@ xz/liblzma : la porte dérobée qui a failli entrer dans toutes les distribution
 | Longueur maximale | 70 caractères |
 | Longueur idéale | 50–65 caractères |
 | Capitalisation | Première lettre du titre uniquement (sentence case) |
-| Majuscules | Autorisées pour les acronymes (BGP, VLCC, IETF) et noms propres uniquement |
+| Majuscules | Autorisées pour les acronymes (BGP, MCP, IETF) et noms propres uniquement |
 
 ---
 
@@ -2868,7 +3142,7 @@ design_tokens.yaml > brand/core.md > fichier canal > system_prompt.md
 # Visual Identity System
 
 ## Identity Statement
-WetSea Observatory visualizes the hidden routes of the modern world through calm cinematic editorial language.
+Wet & Sea AI visualizes the hidden systems of the modern world through calm cinematic editorial language, using the WetSea Observatory design system.
 
 ## Components
 - Oceanic cartographic textures.

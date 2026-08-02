@@ -30,12 +30,12 @@ design_tokens.yaml  >  brand/core.md  >  fichiers de canal  >  autres fichiers
 | Cover podcast | `channels/podcast.md` |
 | Script / narration vidéo | `notebooklm/directives.md` |
 | Mascotte | `brand/mascot.md` (voir `design_tokens.yaml` section mascots) |
-| Contenu cyber/WetSeaTech | `brand/wetseatech_program.md` |
+| Contenu cyber / cloud / agents IA | `brand/wetseatech_program.md` |
 | Hook CLAC | `frameworks/clac.md` |
 | Prompt d'illustration général | `prompts/master_prompt.md` |
 
-> Utiliser `design_tokens.yaml` comme source de palette et `brand/wetseatech_program.md`
-> comme adaptateur contextuel. `#5E8FA3` reste l'accent cyan canonique.
+> `design_tokens.yaml` est l'unique source de palette. `#5E8FA3` est le seul accent
+> cyan. `brand/wetseatech_program.md` adapte la densité technique, pas les couleurs.
 
 ---
 
@@ -92,4 +92,4 @@ maintenance/                Migration, audits et historique opérationnel
 
 ---
 
-*Dernière mise à jour : 2026-05-22*
+*Dernière mise à jour : 2026-08-02*

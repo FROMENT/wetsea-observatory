@@ -75,7 +75,7 @@ xz/liblzma : la porte dérobée qui a failli entrer dans toutes les distribution
 | Longueur maximale | 70 caractères |
 | Longueur idéale | 50–65 caractères |
 | Capitalisation | Première lettre du titre uniquement (sentence case) |
-| Majuscules | Autorisées pour les acronymes (BGP, VLCC, IETF) et noms propres uniquement |
+| Majuscules | Autorisées pour les acronymes (BGP, MCP, IETF) et noms propres uniquement |
 
 ---
 

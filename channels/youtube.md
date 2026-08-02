@@ -21,7 +21,7 @@
 | Couche | Contenu |
 |---|---|
 | Fond | Contexte cartographique ou infrastructurel (deep navy base) |
-| Milieu | Sujet technique principal (câble, port, radar, infrastructure) |
+| Milieu | Sujet technique principal (topologie réseau, datacenter, câble, satellite) |
 | Premier plan | Texte titre (3–6 mots) + sous-label optionnel |
 
 - Composition asymétrique — sujet ancré aux tiers, jamais centré
@@ -119,7 +119,7 @@ Template minimal :
 [Liens sources primaires]
 
 — TAGS —
-#submarinecables #maritime #infrastructure #[sujet]
+#cybersécurité #cloud #agentsIA #[sujet]
 ```
 
 ---

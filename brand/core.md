@@ -30,7 +30,7 @@ docs/context.md, docs/visual_identity.md et branding/composition_rules.md. -->
 
 Un observatoire éditorial et technique qui documente les systèmes invisibles entre océans, infrastructures et signaux — avec une intelligence visuelle calme et cinématographique.
 
-**Vision :** construire une marque-observatoire éditoriale intemporelle autour des infrastructures maritimes et numériques invisibles.
+**Vision :** construire une marque-observatoire éditoriale intemporelle autour de la cybersécurité, des architectures cloud, des agents IA et des infrastructures numériques invisibles.
 
 **Stratégie :**
 - publier des visuels de confiance avec une autorité documentaire
@@ -40,7 +40,7 @@ Un observatoire éditorial et technique qui documente les systèmes invisibles e
 **Périmètre thématique :**
 - cybersécurité, architectures cloud, agents IA, prospective
 - mer et profondeur comme registre visuel, jamais comme sujet
-- câbles sous-marins, réseaux globaux
+- câbles sous-marins, satellites, réseaux globaux (sujets OCCASIONNELS)
 - architectures cloud, systèmes techniques contemporains
 - infrastructures invisibles et dépendances opérationnelles
 
@@ -66,7 +66,7 @@ Fusion subtile de :
 - design éditorial japonais
 - architecture moderniste
 - instrumentation scientifique
-- signalétique portuaire
+- signalétique technique et navale (inspiration graphique, jamais sujet)
 - aviation/naval technique
 - manga adulte minimaliste
 - documentaire contemporain

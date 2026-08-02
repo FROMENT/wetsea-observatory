@@ -5,7 +5,7 @@
 # Tous les fichiers markdown qui citent des couleurs doivent référencer
 # ce fichier ou indiquer "Source: design_tokens.yaml".
 #
-# Dernière mise à jour : 2026-05-22
+# Dernière mise à jour : 2026-08-02
 # Maintenu par : Pascal Froment
 # ============================================================
 
@@ -42,7 +42,7 @@ color:
     deep-navy:
       hex: "#0A1A2B"
       use: "Main backgrounds, ocean depth fields"
-      contrast_on_white: "14.2:1"  # AAA
+      contrast_on_white: "17.57:1"  # AAA — recalcule WCAG 2.1 le 2026-08-02
     graphite:
       hex: "#2A2F36"
       use: "Secondary panels, text contrast layers"
@@ -51,16 +51,23 @@ color:
       use: "Secondary depth zones, overlays"
     muted-cyan:
       hex: "#5E8FA3"
-      use: "Data highlights, routes, graphic accents — NOT for small body text (3.1:1 on deep-navy = AA large only)"
-      warning: "Do not use on mineral-sand for small text. Graphic use only for body text contexts."
+      use: "Data highlights, routes, graphic accents"
+      contrast_on_deep_navy: "4.96:1"          # AA texte courant — OK
+      contrast_on_graphite: "3.81:1"           # AA texte LARGE uniquement
+      contrast_on_dark_ocean_green: "3.45:1"   # AA texte LARGE uniquement
+      contrast_on_mineral_sand: "1.91:1"       # ECHEC — ne jamais utiliser pour du texte
+      warning: "Ratios recalcules WCAG 2.1 le 2026-08-02 : les valeurs precedentes etaient fausses (3.1:1 correspondait en realite a muted-cyan sur off-white). Sur deep-navy le cyan passe AA texte courant. Sur graphite et dark-ocean-green : texte large uniquement. Sur mineral-sand : jamais de texte."
     off-white:
       hex: "#F2F1EC"
       use: "Primary text on dark backgrounds, light cards"
-      contrast_on_deep_navy: "13.8:1"  # AAA
+      contrast_on_deep_navy: "15.53:1"  # AAA — recalcule WCAG 2.1 le 2026-08-02
+      contrast_on_graphite: "11.92:1"   # AAA
+      forbidden_on: "mineral-sand (1.64:1)"
     mineral-sand:
       hex: "#C9BDA8"
       use: "Captions, subtle accents, secondary labels"
-      contrast_on_deep_navy: "7.2:1"  # AA
+      contrast_on_deep_navy: "9.48:1"  # AAA — recalcule WCAG 2.1 le 2026-08-02
+      contrast_on_graphite: "7.27:1"   # AAA texte large / AA courant
 
   # Matière / texture sémantique
   material:

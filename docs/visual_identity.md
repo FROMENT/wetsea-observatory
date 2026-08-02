@@ -1,7 +1,7 @@
 # Visual Identity System
 
 ## Identity Statement
-WetSea Observatory visualizes the hidden routes of the modern world through calm cinematic editorial language.
+Wet & Sea AI visualizes the hidden systems of the modern world through calm cinematic editorial language, using the WetSea Observatory design system.
 
 ## Components
 - Oceanic cartographic textures.
