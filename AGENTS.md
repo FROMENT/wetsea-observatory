@@ -62,61 +62,88 @@ Summary: deep navy (#0A1A2B) · graphite (#2A2F36) · muted cyan (#5E8FA3) · of
 9. Keep all outputs production-ready and reusable by humans and agents.
 10. In case of conflict between files: `design_tokens.yaml` > `brand/core.md` > channel files > other files.
 
-<!-- claude-md-opus5:begin v2 -->
+<!-- claude-md-opus5:begin v3 -->
 ## Règles opérationnelles Opus 5
 
-Source : doc officielle « Prompting Claude Opus 5 » (consultée le 2026-08-02).
-Bloc généré — ne pas éditer à la main hors de `tools/apply_opus5.py`.
+Source : doc officielle « Prompting Claude Opus 5 » et « Prompting best
+practices », citées mot pour mot et vérifiées le 2026-08-02.
+Bloc généré — ne pas éditer à la main, éditer `tools/apply_opus5_v3.py`.
 
 ### Style de réponse
 - Réponses ciblées, brèves et concises. Avertissements et réserves courts ;
   l'essentiel du texte porte sur la réponse.
-- Pour une explication, donner une synthèse de haut niveau sauf demande
-  explicite d'approfondissement.
 - Ajuster la longueur des livrables écrits au besoin réel : couvrir le fond,
   sans sections de remplissage, résumés redondants ni boilerplate.
-- Le paramètre `effort` règle la quantité de réflexion, pas la longueur du texte
-  visible : baisser l'effort ne raccourcit pas fiablement la réponse.
+- Le modèle produit spontanément des réponses plus longues que les modèles
+  antérieurs. La concision se demande explicitement : elle ne découle pas des
+  réglages de coût. Le paramètre `effort` règle le volume de réflexion, pas la
+  longueur de la réponse.
 
 ### Périmètre
 - Livrer ce qui est demandé, au périmètre demandé. Trancher seul les arbitrages
   de routine ; ne revenir vers l'utilisateur que si deux lectures de la demande
   conduisent à des travaux matériellement différents.
-- Si la demande paraît erronée ou qu'une meilleure approche existe, le dire en
-  une phrase puis exécuter la demande telle quelle — sans la rétrécir,
-  l'élargir ni la transformer en silence.
-- Terminer la tâche entière et s'arrêter avant toute action manifestement hors
-  périmètre.
+- Ne faire que les changements demandés ou clairement nécessaires. Pas de
+  fonctionnalité, de refactorisation, de documentation ni de code défensif
+  au-delà de la demande.
+- Écrire des solutions générales et correctes. Ne jamais contourner un test
+  pour le faire passer.
+- Ne jamais spéculer sur du code non ouvert : si un fichier est en cause, le
+  lire avant de conclure.
+- Nettoyer en fin de tâche les fichiers temporaires créés pour itérer.
+- Actions locales et réversibles : procéder. Actions destructrices — suppression,
+  `git push --force`, publication externe — : demander avant.
 
 ### Restitution de l'avancement
 - Avant le premier appel d'outil, annoncer en une phrase ce qui va être fait.
   Pendant le travail, ne signaler qu'un résultat important ou un changement de
-  direction.
-- Commencer le message final par le résultat ; les détails ensuite.
+  direction. Commencer le message final par le résultat ; les détails ensuite.
 - Ne corriger une affirmation antérieure que si l'erreur change le code, les
-  conclusions ou les décisions. Sinon, corriger et continuer sans le signaler.
+  conclusions ou les décisions de l'utilisateur. Énoncer alors la correction
+  simplement et brièvement, puis poursuivre.
 
-### Délégation et effort
+### Outils et délégation
+- Appels d'outils sans dépendance entre eux : les lancer dans le même message,
+  en parallèle. Lire trois fichiers d'un coup, pas l'un après l'autre.
+- Implémenter plutôt que se contenter de suggérer. Utiliser les outils pour
+  découvrir ce qui manque au lieu de le deviner.
 - Ne déléguer à un sous-agent que pour un travail large, réellement indépendant
-  et parallélisable (investigation multi-fichiers). Ne pas déléguer ce qui tient
-  en quelques appels d'outils. Ne jamais utiliser un sous-agent pour vérifier
-  son propre travail. Un seul sous-agent s'il suffit.
-- Effort par défaut `high`. Utiliser `low` et `medium` largement comme levier
-  principal de coût et de latence partout où la qualité tient ; `xhigh` réservé
-  au code et aux boucles agentiques exigeants.
-- Les valeurs d'effort héritées d'un modèle antérieur ne sont pas transposables :
-  rejouer un balayage d'effort sur ses propres évaluations.
-- La réflexion est activée par défaut et ne peut être désactivée qu'à effort
-  `high` ou moins. Préférer garder la réflexion activée à `low` plutôt que la
-  désactiver : à coût comparable, le résultat est meilleur.
+  et parallélisable, ou nécessitant un contexte isolé. Ne pas déléguer ce qui
+  tient en quelques appels d'outils. Ne pas confier à un sous-agent la
+  vérification de son propre travail — une revue par un agent distinct du
+  rédacteur reste un patron valide.
 
-### À proscrire
-- Pas d'échafaudage de vérification (« ajoute une étape de vérification finale »,
-  « fais relire par un sous-agent », « revérifie avant de répondre ») : le modèle
-  s'auto-corrige, ces consignes consomment des tokens sans gain.
-- Ne pas demander au modèle de ne pas réfléchir.
-- Ne pas nommer de balises XML internes ; écrire : « N'inclus pas de balises XML
-  internes ou système dans ta réponse. »
-- Revalider les contournements de vision réglés pour un modèle antérieur : ils
-  sont souvent devenus inutiles.
+### Vérification — lire les deux points ensemble
+- Le modèle s'auto-vérifie. Ne pas ajouter de consignes de relecture redondantes
+  du type « ajoute une étape de vérification finale » ou « fais relire par un
+  sous-agent » : elles provoquent de la sur-vérification et consomment des
+  tokens sans gain de qualité.
+- **Cela ne dispense d'AUCUNE vérification outillée exigée par le projet** :
+  tests, gates, lint, build, hooks. Ces règles-là priment sur le paragraphe
+  ci-dessus. Le point précédent vise l'échafaudage textuel, jamais la mesure.
+
+### Vision
+- Pour les tâches visuelles — graphiques, documents, diagrammes, interfaces —
+  fournir un outil de recadrage ou de zoom permettant de cibler les régions
+  pertinentes de l'image.
+
+### Réglages d'intégration (l'appelant, pas l'agent)
+Ces valeurs se règlent dans la configuration ou l'appel d'API, pas depuis ce
+fichier. Consignées ici pour mémoire.
+- Cinq niveaux d'effort : `low`, `medium`, `high` (défaut sur l'API et sur
+  Claude Code), `xhigh`, `max`.
+- Partir du défaut `high`. Utiliser `low` et `medium` largement, comme levier
+  principal de coût et de latence partout où la qualité tient ; monter à
+  `xhigh` pour le code et les boucles agentiques exigeants.
+- L'allocation de tokens derrière chaque niveau a changé : rejouer un balayage
+  d'effort sur ses propres évaluations plutôt que de reprendre un réglage calé
+  sur un modèle antérieur.
+- La réflexion est activée par défaut et ne peut être désactivée qu'à effort
+  `high` ou moins. Un effort plus bas avec réflexion activée donne généralement
+  un meilleur résultat que la réflexion désactivée, à coût comparable.
+- Si la réflexion doit être désactivée, coller l'instruction combinée
+  **complète** dans le prompt système, sans la paraphraser : « When you use a
+  tool, you may say a brief sentence first. If no tool can express what the user
+  asked for, say so instead of guessing. Do not include internal or system XML
+  tags in your response. »
 <!-- claude-md-opus5:end -->
