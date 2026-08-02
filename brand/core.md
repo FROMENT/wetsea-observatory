@@ -13,11 +13,16 @@ docs/context.md, docs/visual_identity.md et branding/composition_rules.md. -->
 
 ## Identité canonique
 
-**Nom** : WetSea Observatory
-**Labels programme** : WetSeaTech (contenus cyber/tech) · WetAndSeaAI (communications digitales)
+**Marque publique** : Wet & Sea AI — graphie unique, toutes langues
+**Domaine canonique** : wetandseaai.fr
+**Design system** : WetSea Observatory — nom interne, jamais affiché
+**Marque produit endossée** : WetSeaTech (boutique Etsy), sans identité visuelle propre
+**Couche technique interne** : WST — wst-tech.org, dépôts, préfixes `wst_`, Workers
 
-> Règle : "WetSea Observatory" est le seul nom utilisé dans les fichiers core et outputs formels.
-> Les labels programme sont des alias contextuels, jamais des substituts.
+> Règle : "Wet & Sea AI" est le seul nom affiché au public. "WetSea Observatory"
+> désigne le référentiel visuel, pas la marque. Proscrits : "Wet & Sea & IA",
+> "WetAndSeaAI", "WST NETWORK", "WST Labs".
+> Source canonique : `design_tokens.yaml`, bloc `canonical_names` (décision 2026-08-02).
 
 ---
 

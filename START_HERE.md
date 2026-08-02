@@ -79,12 +79,16 @@ maintenance/                Migration, audits et historique opérationnel
 
 ## Nommage de la marque
 
+<!-- Source canonique : design_tokens.yaml, bloc canonical_names. Ne pas dupliquer. -->
+
 | Contexte | Nom à utiliser |
 |---|---|
-| Tous les fichiers core, outputs formels | **WetSea Observatory** |
-| Contenus cyber/tech/security | WetSeaTech (label programme) |
-| Communications digitales générales | WetAndSeaAI (label programme) |
-| Jamais en remplacement du nom canonique | ~~WetAndSeaAI / WetSeaTech~~ |
+| Tout output public, toutes langues | **Wet & Sea AI** |
+| Domaine canonique | wetandseaai.fr |
+| Design system (interne, jamais affiché) | WetSea Observatory |
+| Boutique Etsy (marque produit endossée) | WetSeaTech |
+| Couche technique interne (dépôts, `wst_`, wst-tech.org) | WST |
+| Proscrits | ~~Wet & Sea & IA~~ · ~~WetAndSeaAI~~ · ~~WST NETWORK~~ · ~~WST Labs~~ |
 
 ---
 

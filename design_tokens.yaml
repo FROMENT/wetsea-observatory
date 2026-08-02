@@ -1,4 +1,5 @@
-# WetSea Observatory — Design Tokens
+# Wet & Sea AI — Design Tokens
+# Design system : WetSea Observatory (nom interne du referentiel visuel)
 # ============================================================
 # SOURCE DE VÉRITÉ CANONIQUE — Ne pas dupliquer ces valeurs ailleurs.
 # Tous les fichiers markdown qui citent des couleurs doivent référencer
@@ -9,13 +10,27 @@
 # ============================================================
 
 version: "2.0"
-brand: "WetSea Observatory"
+brand: "Wet & Sea AI"
+design_system: "WetSea Observatory"   # nom interne du referentiel visuel, jamais affiche au public
 canonical_names:
-  primary: "WetSea Observatory"
-  program_labels:
-    - "WetSeaTech"
+  primary: "Wet & Sea AI"
+  spelling: "Wet & Sea AI"            # graphie unique, y compris en francais
+  domain: "wetandseaai.fr"            # domaine canonique
+  endorsed:
+    - name: "WetSeaTech"
+      role: "Boutique Etsy. Marque produit endossee : 'WetSeaTech, la boutique de Wet & Sea AI'. Aucune identite visuelle propre."
+    - name: "WST"
+      role: "Couche technique interne : wst-tech.org (site de veille endosse), depots, prefixes wst_, Workers, labs. Jamais affichee comme marque publique."
+  deprecated:
+    - "Wet & Sea & IA"     # double esperluette, se lit et se prononce mal
     - "WetAndSeaAI"
-  note: "Program labels are contextual aliases only. 'WetSea Observatory' is the canonical identity in all core outputs."
+    - "WST NETWORK"
+    - "WST Labs"
+  note: >
+    'Wet & Sea AI' est la seule marque affichee au public, dans toutes les langues.
+    'WetSea Observatory' designe le design system, pas la marque.
+    Decision Pascal Froment du 2026-08-02, prise apres constat de six graphies
+    concurrentes en circulation.
 
 # ─────────────────────────────────────────
 # COULEURS
@@ -52,19 +67,14 @@ color:
     brushed-aluminum: "evoked through gradient #94A3B8 → #C9BDA8"
     ocean-surface: "deep-navy with 5-12% grain overlay"
 
-  # Extension WetSeaTech — uniquement pour contenus cyber/tech
-  # Ne pas utiliser pour les outputs WetSea Observatory standard
-  extension_wetseatech:
-    near-black:
-      hex: "#07101A"
-      use: "High-density dark backgrounds (video, cyber content only)"
-    signal-blue:
-      hex: "#1E3A5F"
-      use: "Secondary panels in cyber context"
-    cold-grey:
-      hex: "#94A3B8"
-      use: "Secondary text on dark backgrounds (cyber context)"
-    note: "WetSeaTech palette is a contextual override for cyber/security content. The primary palette above remains valid and preferred."
+  # Extension WetSeaTech — RETIREE le 2026-08-02.
+  # WetSeaTech est desormais une marque produit endossee (boutique Etsy), sans
+  # identite visuelle propre. Un second jeu de tokens etait la cause racine du
+  # defaut P-01 de l'audit UX (derive vers le cyan neon #00D4FF) : deux palettes
+  # coexistantes finissent toujours par diverger. La palette primaire ci-dessus
+  # s'applique a TOUS les contenus, cyber compris.
+  # Les trois valeurs retirees (#07101A, #1E3A5F, #94A3B8) ne doivent plus etre
+  # citees. #94A3B8 subsiste uniquement dans material.brushed-aluminum.
 
   # Valeurs interdites
   forbidden:

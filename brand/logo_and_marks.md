@@ -53,9 +53,14 @@ lot ultérieur.
 
 ## Usage provisoire
 
-Les compositions peuvent utiliser le nom typographique **WetSea Observatory**
-sans prétendre constituer un logo. Elles suivent les familles et contraintes de
+Les compositions peuvent utiliser le nom typographique **Wet & Sea AI** sans
+prétendre constituer un logo. Elles suivent les familles et contraintes de
 `design_tokens.yaml`.
 
-Les labels WetSeaTech et WetAndSeaAI restent des labels de programme et ne
-doivent pas être transformés automatiquement en marques autonomes.
+Une seule graphie, dans toutes les langues : `Wet & Sea AI`. Ne jamais composer
+`Wet & Sea & IA` (double esperluette) ni `WetAndSeaAI` (agglutiné).
+
+**WetSea Observatory** ne se compose jamais dans un visuel public : c'est le nom
+du design system. **WetSeaTech** ne se compose que sur les supports de la boutique
+Etsy, en endossement (« WetSeaTech, la boutique de Wet & Sea AI »), avec la police
+et la palette principales — jamais avec une identité propre.

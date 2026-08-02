@@ -1,13 +1,14 @@
-# WetSea Observatory — Knowledge Base
+# Wet & Sea AI — Knowledge Base
 
-> Canonical identity: **WetSea Observatory**.
-> "WetAndSeaAI / WetSeaTech" are accepted as program labels and directive context aliases.
-
-# WETANDSEAAI / WETSEATECH — KNOWLEDGE
+> Marque publique unique : **Wet & Sea AI** (wetandseaai.fr).
+> **WetSea Observatory** est le nom du design system, jamais affiché au public.
+> **WetSeaTech** est la boutique Etsy endossée. **WST** est la couche technique
+> interne (wst-tech.org, dépôts, préfixes `wst_`).
+> Source canonique : `design_tokens.yaml`, bloc `canonical_names`.
 
 ## IDENTITÉ
 
-WetAndSeaAI / WetSeaTech explore :
+Wet & Sea AI explore :
 - cybersécurité,
 - architectures cloud,
 - agents IA et systèmes autonomes,

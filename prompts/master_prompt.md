@@ -1,7 +1,7 @@
-# WetSea Observatory — Prompt Maître
-<!-- Naming rule appliquée. Couleurs alignées sur design_tokens.yaml. -->
+# Wet & Sea AI — Prompt Maître
+<!-- Naming rule 2026-08-02. Couleurs alignées sur design_tokens.yaml. -->
 
-Create a premium editorial illustration for **WetSea Observatory**.
+Create a premium editorial illustration for **Wet & Sea AI**, following the WetSea Observatory design system.
 
 ## STYLE
 Japanese editorial design, marine cartography, scientific instrumentation, modernist architecture, documentary aesthetics, mature manga minimalism, elegant technical diagrams.

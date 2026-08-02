@@ -1,13 +1,18 @@
-# WetSea Observatory — Brand Guidelines
-<!-- Naming rule appliquée : "WetAndSeaAI / WetSeaTech" sont des labels programme, pas le nom canonique -->
+# Wet & Sea AI — Brand Guidelines
+<!-- Naming rule 2026-08-02 : "Wet & Sea AI" est la marque publique unique. "WetSea Observatory" est le nom du design system. Source : design_tokens.yaml -->
 <!-- LEGACY — Voir brand/core.md pour la version canonique consolidée. -->
 
 ## Positioning
 A cinematic technical editorial observatory documenting hidden systems between oceans, infrastructures, and signals.
 
 ## Naming Consistency
-- Canonical identity name: **WetSea Observatory**.
-- "WetAndSeaAI" and "WetSeaTech" may be used as campaign or product labels, never as a replacement for the canonical brand name in core system files.
+<!-- Source canonique : design_tokens.yaml, bloc canonical_names — ne pas dupliquer -->
+- Public brand name, single spelling in every language: **Wet & Sea AI**.
+- Canonical domain: **wetandseaai.fr**.
+- **WetSea Observatory** names the design system, never the brand. It is internal.
+- **WetSeaTech** is the Etsy shop — an endorsed product brand ("WetSeaTech, the Wet & Sea AI shop"). It has no visual identity of its own.
+- **WST** is the internal technical layer: wst-tech.org (endorsed watch site), repositories, `wst_` prefixes, Workers, labs. Never shown as a public brand.
+- Deprecated, do not use: "Wet & Sea & IA", "WetAndSeaAI", "WST NETWORK", "WST Labs".
 
 ## Brand Character
 - Calm and precise.

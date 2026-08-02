@@ -1,6 +1,6 @@
 # WST Observatory — Directives Consolidées
 
-> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:06:13Z
+> **Auto-généré** par `scripts/build_master.sh` · Last update : 2026-08-02T16:32:24Z
 > Source : https://github.com/FROMENT/wetsea-observatory
 > **Ne pas éditer ce fichier manuellement** — il est régénéré à chaque push.
 
@@ -23,9 +23,8 @@ l'intégralité de la charte WST en une seule source indexée.
 - **[`brand/logo_and_marks.md`](#source-brand-logo_and_marks-md)** — WetSea Observatory — Logo and Marks Governance
 - **[`brand/mascot.md`](#source-brand-mascot-md)** — WetSea Observatory — Mascot System
 - **[`brand/visual_references.md`](#source-brand-visual_references-md)** — WetSea Observatory — Visual References Matrix
-- **[`brand/wetseatech_program.md`](#source-brand-wetseatech_program-md)** — WetSeaTech — Program Adapter
-- **[`brand_guidelines 2.md`](#source-brand_guidelines 2-md)** — WetSea Observatory — Brand Guidelines
-- **[`brand_guidelines.md`](#source-brand_guidelines-md)** — WetSea Observatory — Brand Guidelines
+- **[`brand/wetseatech_program.md`](#source-brand-wetseatech_program-md)** — Ligne cyber — Program Adapter
+- **[`brand_guidelines.md`](#source-brand_guidelines-md)** — Wet & Sea AI — Brand Guidelines
 - **[`branding/composition_rules.md`](#source-branding-composition_rules-md)** — Cinematic Composition Rules
 - **[`branding/forbidden_styles.md`](#source-branding-forbidden_styles-md)** — Forbidden Aesthetics
 - **[`branding/palettes.md`](#source-branding-palettes-md)** — Palettes
@@ -50,19 +49,19 @@ l'intégralité de la charte WST en une seule source indexée.
 - **[`identity/brand_core.md`](#source-identity-brand_core-md)** — Compatibility Reference — Brand Core
 - **[`identity/forbidden.md`](#source-identity-forbidden-md)** — Compatibility Reference — Forbidden Aesthetics
 - **[`identity/mascot.md`](#source-identity-mascot-md)** — Compatibility Reference — Mascot System
-- **[`knowledge.md`](#source-knowledge-md)** — WetSea Observatory — Knowledge Base
+- **[`knowledge.md`](#source-knowledge-md)** — Wet & Sea AI — Knowledge Base
 - **[`maintenance/migration_map.md`](#source-maintenance-migration_map-md)** — WetSea Observatory — Migration Map
 - **[`notebooklm/README.md`](#source-notebooklm-readme-md)** — NotebookLM Brand Kit
 - **[`notebooklm/WetSeaTech_Graphic_Identity_NotebookLM.md`](#source-notebooklm-wetseatech_graphic_identity_notebooklm-md)** — Compatibility Reference — WetSeaTech Visual Adapter
 - **[`notebooklm/clap.md`](#source-notebooklm-clap-md)** — Compatibility Reference — CLAC Framework
 - **[`notebooklm/directives.md`](#source-notebooklm-directives-md)** — WetSeaTech — Complete NotebookLM Master Directives
 - **[`prompts/mascot_prompt.md`](#source-prompts-mascot_prompt-md)** — Mascot System Prompt
-- **[`prompts/master_prompt.md`](#source-prompts-master_prompt-md)** — WetSea Observatory — Prompt Maître
+- **[`prompts/master_prompt.md`](#source-prompts-master_prompt-md)** — Wet & Sea AI — Prompt Maître
 - **[`prompts/negative_prompt_standard.md`](#source-prompts-negative_prompt_standard-md)** — WetSea Observatory — Negative Prompt Standard
 - **[`prompts/script_template.md`](#source-prompts-script_template-md)** — WetSea Observatory — Template de Script Vidéo
 - **[`prompts/youtube_thumbnail_prompt.md`](#source-prompts-youtube_thumbnail_prompt-md)** — WetSea Observatory — YouTube Thumbnail Prompt
 - **[`references/visual_references.md`](#source-references-visual_references-md)** — Compatibility Reference — Visual References
-- **[`system_prompt.md`](#source-system_prompt-md)** — WetSea Observatory — System Prompt
+- **[`system_prompt.md`](#source-system_prompt-md)** — Wet & Sea AI — System Prompt
 - **[`youtube/README.md`](#source-youtube-readme-md)** — YouTube Brand Kit
 - **[`youtube/thumbnail_rules.md`](#source-youtube-thumbnail_rules-md)** — YouTube Thumbnail Rules
 
@@ -135,6 +134,65 @@ Summary: deep navy (#0A1A2B) · graphite (#2A2F36) · muted cyan (#5E8FA3) · of
 8. Favor concise precision over visual excess.
 9. Keep all outputs production-ready and reusable by humans and agents.
 10. In case of conflict between files: `design_tokens.yaml` > `brand/core.md` > channel files > other files.
+
+<!-- claude-md-opus5:begin v2 -->
+## Règles opérationnelles Opus 5
+
+Source : doc officielle « Prompting Claude Opus 5 » (consultée le 2026-08-02).
+Bloc généré — ne pas éditer à la main hors de `tools/apply_opus5.py`.
+
+### Style de réponse
+- Réponses ciblées, brèves et concises. Avertissements et réserves courts ;
+  l'essentiel du texte porte sur la réponse.
+- Pour une explication, donner une synthèse de haut niveau sauf demande
+  explicite d'approfondissement.
+- Ajuster la longueur des livrables écrits au besoin réel : couvrir le fond,
+  sans sections de remplissage, résumés redondants ni boilerplate.
+- Le paramètre `effort` règle la quantité de réflexion, pas la longueur du texte
+  visible : baisser l'effort ne raccourcit pas fiablement la réponse.
+
+### Périmètre
+- Livrer ce qui est demandé, au périmètre demandé. Trancher seul les arbitrages
+  de routine ; ne revenir vers l'utilisateur que si deux lectures de la demande
+  conduisent à des travaux matériellement différents.
+- Si la demande paraît erronée ou qu'une meilleure approche existe, le dire en
+  une phrase puis exécuter la demande telle quelle — sans la rétrécir,
+  l'élargir ni la transformer en silence.
+- Terminer la tâche entière et s'arrêter avant toute action manifestement hors
+  périmètre.
+
+### Restitution de l'avancement
+- Avant le premier appel d'outil, annoncer en une phrase ce qui va être fait.
+  Pendant le travail, ne signaler qu'un résultat important ou un changement de
+  direction.
+- Commencer le message final par le résultat ; les détails ensuite.
+- Ne corriger une affirmation antérieure que si l'erreur change le code, les
+  conclusions ou les décisions. Sinon, corriger et continuer sans le signaler.
+
+### Délégation et effort
+- Ne déléguer à un sous-agent que pour un travail large, réellement indépendant
+  et parallélisable (investigation multi-fichiers). Ne pas déléguer ce qui tient
+  en quelques appels d'outils. Ne jamais utiliser un sous-agent pour vérifier
+  son propre travail. Un seul sous-agent s'il suffit.
+- Effort par défaut `high`. Utiliser `low` et `medium` largement comme levier
+  principal de coût et de latence partout où la qualité tient ; `xhigh` réservé
+  au code et aux boucles agentiques exigeants.
+- Les valeurs d'effort héritées d'un modèle antérieur ne sont pas transposables :
+  rejouer un balayage d'effort sur ses propres évaluations.
+- La réflexion est activée par défaut et ne peut être désactivée qu'à effort
+  `high` ou moins. Préférer garder la réflexion activée à `low` plutôt que la
+  désactiver : à coût comparable, le résultat est meilleur.
+
+### À proscrire
+- Pas d'échafaudage de vérification (« ajoute une étape de vérification finale »,
+  « fais relire par un sous-agent », « revérifie avant de répondre ») : le modèle
+  s'auto-corrige, ces consignes consomment des tokens sans gain.
+- Ne pas demander au modèle de ne pas réfléchir.
+- Ne pas nommer de balises XML internes ; écrire : « N'inclus pas de balises XML
+  internes ou système dans ta réponse. »
+- Revalider les contournements de vision réglés pour un modèle antérieur : ils
+  sont souvent devenus inutiles.
+<!-- claude-md-opus5:end -->
 
 ---
 
@@ -232,12 +290,16 @@ maintenance/                Migration, audits et historique opérationnel
 
 ## Nommage de la marque
 
+<!-- Source canonique : design_tokens.yaml, bloc canonical_names. Ne pas dupliquer. -->
+
 | Contexte | Nom à utiliser |
 |---|---|
-| Tous les fichiers core, outputs formels | **WetSea Observatory** |
-| Contenus cyber/tech/security | WetSeaTech (label programme) |
-| Communications digitales générales | WetAndSeaAI (label programme) |
-| Jamais en remplacement du nom canonique | ~~WetAndSeaAI / WetSeaTech~~ |
+| Tout output public, toutes langues | **Wet & Sea AI** |
+| Domaine canonique | wetandseaai.fr |
+| Design system (interne, jamais affiché) | WetSea Observatory |
+| Boutique Etsy (marque produit endossée) | WetSeaTech |
+| Couche technique interne (dépôts, `wst_`, wst-tech.org) | WST |
+| Proscrits | ~~Wet & Sea & IA~~ · ~~WetAndSeaAI~~ · ~~WST NETWORK~~ · ~~WST Labs~~ |
 
 ---
 
@@ -1056,11 +1118,16 @@ docs/context.md, docs/visual_identity.md et branding/composition_rules.md. -->
 
 ## Identité canonique
 
-**Nom** : WetSea Observatory
-**Labels programme** : WetSeaTech (contenus cyber/tech) · WetAndSeaAI (communications digitales)
+**Marque publique** : Wet & Sea AI — graphie unique, toutes langues
+**Domaine canonique** : wetandseaai.fr
+**Design system** : WetSea Observatory — nom interne, jamais affiché
+**Marque produit endossée** : WetSeaTech (boutique Etsy), sans identité visuelle propre
+**Couche technique interne** : WST — wst-tech.org, dépôts, préfixes `wst_`, Workers
 
-> Règle : "WetSea Observatory" est le seul nom utilisé dans les fichiers core et outputs formels.
-> Les labels programme sont des alias contextuels, jamais des substituts.
+> Règle : "Wet & Sea AI" est le seul nom affiché au public. "WetSea Observatory"
+> désigne le référentiel visuel, pas la marque. Proscrits : "Wet & Sea & IA",
+> "WetAndSeaAI", "WST NETWORK", "WST Labs".
+> Source canonique : `design_tokens.yaml`, bloc `canonical_names` (décision 2026-08-02).
 
 ---
 
@@ -1492,12 +1559,17 @@ lot ultérieur.
 
 ## Usage provisoire
 
-Les compositions peuvent utiliser le nom typographique **WetSea Observatory**
-sans prétendre constituer un logo. Elles suivent les familles et contraintes de
+Les compositions peuvent utiliser le nom typographique **Wet & Sea AI** sans
+prétendre constituer un logo. Elles suivent les familles et contraintes de
 `design_tokens.yaml`.
 
-Les labels WetSeaTech et WetAndSeaAI restent des labels de programme et ne
-doivent pas être transformés automatiquement en marques autonomes.
+Une seule graphie, dans toutes les langues : `Wet & Sea AI`. Ne jamais composer
+`Wet & Sea & IA` (double esperluette) ni `WetAndSeaAI` (agglutiné).
+
+**WetSea Observatory** ne se compose jamais dans un visuel public : c'est le nom
+du design system. **WetSeaTech** ne se compose que sur les supports de la boutique
+Etsy, en endossement (« WetSeaTech, la boutique de Wet & Sea AI »), avec la police
+et la palette principales — jamais avec une identité propre.
 
 ---
 
@@ -1643,31 +1715,39 @@ neutral expression, silent and observant"
 
 ## 📄 SOURCE: `brand/wetseatech_program.md`
 
-# WetSeaTech — Program Adapter
+# Ligne cyber — Program Adapter
+
+<!-- Nom de fichier conservé (wetseatech_program.md) pour ne pas casser les chemins
+     référencés dans AGENTS.md et les outils. Le contenu n'est plus une sous-marque. -->
 
 **Status:** ADAPTER
 **Scope:** Contenus cyber, sécurité, infrastructure numérique et systèmes IA
 **Authority:** `design_tokens.yaml`, `brand/core.md`, `brand/editorial_voice.md`,
 `brand/forbidden.md`
-**Consumers:** NotebookLM, vidéo, audio, slides et prompts visuels WetSeaTech
+**Consumers:** NotebookLM, vidéo, audio, slides et prompts visuels Wet & Sea AI
 
 ---
 
 ## Relation à la marque
 
-WetSeaTech est un label de programme de WetSea Observatory. Il ne remplace pas
-le nom canonique dans les documents core et ne constitue pas une identité
-visuelle indépendante.
+Depuis le 2026-08-02, la cybersécurité, le cloud et les agents IA sont des sujets
+principaux de **Wet & Sea AI** — plus le territoire d'une sous-marque. Ce fichier
+n'est donc plus un adaptateur de marque mais un **adaptateur de densité** : il
+décrit comment traiter un sujet technique dense, pas une identité distincte.
 
-Le programme applique les mêmes principes de calme, précision, retenue,
-documentation et espace négatif. Son adaptation porte sur la densité technique
-et le sujet, pas sur un changement de personnalité de marque.
+**WetSeaTech** ne désigne plus qu'une chose : la boutique Etsy, marque produit
+endossée (« WetSeaTech, la boutique de Wet & Sea AI »), sans identité visuelle
+propre.
+
+La ligne applique les mêmes principes de calme, précision, retenue, documentation
+et espace négatif. Son adaptation porte sur la densité technique et le sujet, pas
+sur un changement de personnalité de marque.
 
 ---
 
 ## Périmètre
 
-WetSeaTech couvre notamment :
+La ligne cyber couvre notamment :
 
 - cybersécurité opérationnelle
 - infrastructure internet et routage
@@ -1691,14 +1771,13 @@ Le modèle narratif canonique reste Observation → Système → Implication.
 
 ## Adaptation visuelle
 
-Utiliser la palette principale de `design_tokens.yaml`.
+Utiliser la palette principale de `design_tokens.yaml`. Elle est la seule.
 
-L'extension `color.extension_wetseatech` peut être utilisée lorsque le contexte
-cyber ou sécurité exige une densité plus sombre :
-
-- near-black pour les zones de contraste
-- signal-blue pour les panneaux secondaires
-- cold-grey pour les informations secondaires
+L'extension `color.extension_wetseatech` a été **retirée le 2026-08-02**. Deux jeux
+de tokens coexistants avaient dérivé jusqu'au cyan néon `#00D4FF` (défaut P-01 de
+l'audit UX), en contradiction directe avec la règle « no neon » de tous les autres
+fichiers. Une densité plus sombre s'obtient par la superposition et le grain, pas
+par un second jeu de couleurs.
 
 Le muted cyan canonique reste l'unique accent cyan. Il est utilisé comme signal,
 route, trace ou nœud, jamais comme lumière dominante.
@@ -1743,71 +1822,25 @@ glitch sans fonction.
 
 ---
 
-<a id="source-brand_guidelines 2-md"></a>
-
-## 📄 SOURCE: `brand_guidelines 2.md`
-
-# WetSea Observatory — Brand Guidelines
-<!-- Naming rule appliquée : "WetAndSeaAI / WetSeaTech" sont des labels programme, pas le nom canonique -->
-<!-- Voir identity/brand_core.md pour la version consolidée de ce fichier -->
-
-## Positioning
-A cinematic technical editorial observatory documenting hidden systems between oceans, infrastructures, and signals.
-
-## Naming Consistency
-- Canonical identity name: **WetSea Observatory**.
-- "WetAndSeaAI" and "WetSeaTech" may be used as campaign or product labels, never as a replacement for the canonical brand name in core system files.
-
-## Brand Character
-- Calm and precise.
-- Sophisticated but readable.
-- Documentary, technical, timeless.
-- Narrative without spectacle.
-
-## Visual Principles
-1. **Strong negative space**: breathable compositions and clear hierarchy.
-2. **Subtle technical cues**: routes, annotations, instrumentation markers.
-3. **Premium editorial minimalism**: restraint, coherence, typography discipline.
-4. **Controlled chroma system**: deep navy, graphite, muted cyan, dark ocean green, off-white, mineral sand (plus brushed aluminum as material cue).
-
-## Forbidden Directions
-- Cyberpunk / RGB gaming / aggressive neon.
-- Startup SaaS style, YouTube merch look, generic AI aesthetics.
-- Crypto/web3 codes or cliché sci-fi tropes.
-- Cartoon, kawaii, or hyper-expressive mascots.
-- Graphic overload and oversized logos.
-
-## Applications
-The system must remain coherent for:
-- posters,
-- restrained apparel,
-- premium mugs,
-- minimal stickers,
-- podcast covers,
-- YouTube thumbnails,
-- premium Etsy products,
-- desk objects,
-- editorial blog visuals.
-Imahge generation 
-WST PRIORITY RULE
-- Prefer omission over invention.
--Negative space is superior to fabricated detail.
----
-
 <a id="source-brand_guidelines-md"></a>
 
 ## 📄 SOURCE: `brand_guidelines.md`
 
-# WetSea Observatory — Brand Guidelines
-<!-- Naming rule appliquée : "WetAndSeaAI / WetSeaTech" sont des labels programme, pas le nom canonique -->
+# Wet & Sea AI — Brand Guidelines
+<!-- Naming rule 2026-08-02 : "Wet & Sea AI" est la marque publique unique. "WetSea Observatory" est le nom du design system. Source : design_tokens.yaml -->
 <!-- LEGACY — Voir brand/core.md pour la version canonique consolidée. -->
 
 ## Positioning
 A cinematic technical editorial observatory documenting hidden systems between oceans, infrastructures, and signals.
 
 ## Naming Consistency
-- Canonical identity name: **WetSea Observatory**.
-- "WetAndSeaAI" and "WetSeaTech" may be used as campaign or product labels, never as a replacement for the canonical brand name in core system files.
+<!-- Source canonique : design_tokens.yaml, bloc canonical_names — ne pas dupliquer -->
+- Public brand name, single spelling in every language: **Wet & Sea AI**.
+- Canonical domain: **wetandseaai.fr**.
+- **WetSea Observatory** names the design system, never the brand. It is internal.
+- **WetSeaTech** is the Etsy shop — an endorsed product brand ("WetSeaTech, the Wet & Sea AI shop"). It has no visual identity of its own.
+- **WST** is the internal technical layer: wst-tech.org (endorsed watch site), repositories, `wst_` prefixes, Workers, labs. Never shown as a public brand.
+- Deprecated, do not use: "Wet & Sea & IA", "WetAndSeaAI", "WST NETWORK", "WST Labs".
 
 ## Brand Character
 - Calm and precise.
@@ -3281,16 +3314,17 @@ during the staged migration. Do not add or maintain mascot rules here.
 
 ## 📄 SOURCE: `knowledge.md`
 
-# WetSea Observatory — Knowledge Base
+# Wet & Sea AI — Knowledge Base
 
-> Canonical identity: **WetSea Observatory**.
-> "WetAndSeaAI / WetSeaTech" are accepted as program labels and directive context aliases.
-
-# WETANDSEAAI / WETSEATECH — KNOWLEDGE
+> Marque publique unique : **Wet & Sea AI** (wetandseaai.fr).
+> **WetSea Observatory** est le nom du design system, jamais affiché au public.
+> **WetSeaTech** est la boutique Etsy endossée. **WST** est la couche technique
+> interne (wst-tech.org, dépôts, préfixes `wst_`).
+> Source canonique : `design_tokens.yaml`, bloc `canonical_names`.
 
 ## IDENTITÉ
 
-WetAndSeaAI / WetSeaTech explore :
+Wet & Sea AI explore :
 - cybersécurité,
 - architectures cloud,
 - agents IA et systèmes autonomes,
@@ -3905,10 +3939,10 @@ Create mascots as **editorial symbolic entities**, not cartoon characters.
 
 ## 📄 SOURCE: `prompts/master_prompt.md`
 
-# WetSea Observatory — Prompt Maître
-<!-- Naming rule appliquée. Couleurs alignées sur design_tokens.yaml. -->
+# Wet & Sea AI — Prompt Maître
+<!-- Naming rule 2026-08-02. Couleurs alignées sur design_tokens.yaml. -->
 
-Create a premium editorial illustration for **WetSea Observatory**.
+Create a premium editorial illustration for **Wet & Sea AI**, following the WetSea Observatory design system.
 
 ## STYLE
 Japanese editorial design, marine cartography, scientific instrumentation, modernist architecture, documentary aesthetics, mature manga minimalism, elegant technical diagrams.
@@ -4287,17 +4321,19 @@ reference rules here.
 
 ## 📄 SOURCE: `system_prompt.md`
 
-# WetSea Observatory — System Prompt
-<!-- Naming rule appliquée : "WetAndSeaAI / WetSeaTech" sont des labels programme, pas le nom canonique -->
+# Wet & Sea AI — System Prompt
+<!-- Naming rule 2026-08-02 : marque publique "Wet & Sea AI" ; "WetSea Observatory" = design system. Source : design_tokens.yaml -->
 
-You are the editorial brand system engine for **WetSea Observatory**.
+You are the editorial brand system engine for **Wet & Sea AI**, operating the **WetSea Observatory** design system.
 
 ## Objective
 Create premium, coherent visual and textual assets that communicate oceans, invisible infrastructures, and technical networks with calm cinematic intelligence.
 
 ## Naming Rule
-- Keep **WetSea Observatory** as the canonical brand identity in core outputs.
-- Treat "WetAndSeaAI" / "WetSeaTech" as optional program labels only when specifically requested.
+- **Wet & Sea AI** is the only brand name in public outputs. One spelling, every language.
+- **WetSea Observatory** is the design system name. Internal use only.
+- **WetSeaTech** appears only as the endorsed Etsy shop.
+- Never emit "Wet & Sea & IA", "WetAndSeaAI", "WST NETWORK" or "WST Labs".
 
 ## Mandatory Constraints
 1. Preserve a restrained, intelligent, timeless editorial mood.
