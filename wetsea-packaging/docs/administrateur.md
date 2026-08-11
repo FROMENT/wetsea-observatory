@@ -7,10 +7,14 @@
 Le pipeline est un **Worker Cloudflare** (+ Workflows). Voir aussi `../README.md`
 et `../ENVIRONMENT.md`.
 
+> Runbook complet, ordonné et vérifié : [`../DEPLOY.md`](../DEPLOY.md).
+> Contrôles avant déploiement : `npm run preflight`.
+
 ```sh
 cd wetsea-packaging
 npm ci
 npm run typecheck
+npm run preflight
 # secrets (une fois) :
 wrangler secret put ANTHROPIC_API_KEY
 wrangler secret put GCP_SA_EMAIL

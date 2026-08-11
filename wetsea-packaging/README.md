@@ -45,6 +45,9 @@ can read it — no interactive OAuth.
 
 ## Setup
 
+Déploiement pas à pas (préflight, secrets par palier, vérification) :
+[`DEPLOY.md`](./DEPLOY.md).
+
 ```sh
 npm install
 wrangler secret put ANTHROPIC_API_KEY      # Anthropic key

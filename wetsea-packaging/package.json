@@ -6,7 +6,8 @@
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "typecheck": "tsc --noEmit",
-    "get-yt-token": "node scripts/get-youtube-refresh-token.mjs"
+    "get-yt-token": "node scripts/get-youtube-refresh-token.mjs",
+    "preflight": "node scripts/preflight.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.109.0",

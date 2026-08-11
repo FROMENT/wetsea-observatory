@@ -3,6 +3,13 @@ main = "src/index.ts"
 compatibility_date = "2025-06-01"
 compatibility_flags = ["nodejs_compat"]
 
+# Logs are off by default on Cloudflare. But "L3 held for a full cycle" is the
+# prerequisite for L4 — without logs there is no way to prove it. So observe
+# from the very first deploy, not after the fact.
+[observability]
+enabled = true
+head_sampling_rate = 1
+
 # Cron fans out: one trigger -> scheduled() discovers pending videos -> N Workflow instances.
 [triggers]
 crons = ["0 6 * * *"] # daily 06:00 UTC; adjust as needed
