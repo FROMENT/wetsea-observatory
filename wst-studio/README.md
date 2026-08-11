@@ -23,10 +23,25 @@ npm run typecheck                  # tsc --noEmit -> exit 0
 ```sh
 npm run build                      # esbuild -> dist/studio.mjs
 
+node dist/studio.mjs status                 # niveau armé, prochain palier, historique
 node dist/studio.mjs levels                 # l'échelle L0->L9 + invariants
 node dist/studio.mjs explain L6             # décideur, rayon, retour arrière, prérequis
 node dist/studio.mjs check --kits ../wetsea-packaging/examples/pilot_kits.json
 ```
+
+### Armer un palier
+
+Le niveau en vigueur est dans **`studio.state.json`** (versionné) : changer de
+palier est un commit relu. Sans `--level`, tout raisonne à ce niveau.
+
+```sh
+node dist/studio.mjs arm L4 --attest GITHUB_TOKEN --motif "batch rétroactif"
+```
+
+`arm` refuse le **saut de palier** (`L3 -> L6`) et refuse tant que les secrets
+exigés par le niveau ne sont pas **attestés**. Le Studio ne peut pas lire les
+secrets du Worker : il enregistre un engagement daté et signé plutôt qu'une
+vérification factice. Le désarmement est toujours permis.
 
 ### Le gate — « ai-je le droit ? »
 

@@ -129,6 +129,36 @@ propre réglage, sous revue ». L'invariant 4 le borne définitivement.
 
 ---
 
+## 3 bis. Armement : l'état est versionné, pas configuré
+
+Le niveau en vigueur vit dans **`studio.state.json`**, un fichier **versionné**.
+Conséquence voulue : changer de palier est un **commit relu**, pas une variable
+d'environnement basculée un vendredi soir. Sans `--level`, toutes les commandes
+raisonnent au niveau **réellement armé** — la console dit l'état du système, pas
+un défaut optimiste.
+
+```sh
+studio status                          # niveau armé, prochain palier, historique
+studio arm L4 --attest GITHUB_TOKEN --motif "..."
+```
+
+`arm` applique deux refus :
+
+- **Saut de palier** (invariant 5) : `L3 -> L6` est refusé, il faut passer par L4.
+- **Secret non attesté** : le niveau visé exige `GITHUB_TOKEN` ? Il faut le déclarer.
+
+### Pourquoi une attestation et pas une vérification
+
+Le Studio **ne peut pas lire** les secrets du Worker : ils vivent chez
+Cloudflare, hors de sa portée. Plutôt que de simuler une vérification qu'il ne
+fait pas, il enregistre un **engagement daté et signé** — « je confirme avoir
+posé ce secret », avec l'auteur et le motif, dans l'historique **et** dans git.
+Attester est un acte ; se tromper est traçable. Une fausse vérification aurait
+donné la même confiance sans aucune de ces propriétés.
+
+Le désarmement (`arm L3` depuis un niveau supérieur) est **toujours** permis
+sans condition : c'est la marche arrière exigée par L8.
+
 ## 4. Modèle d'autorisation
 
 `authorize(action, ctx)` part d'un **refus** et n'accorde que si tout est réuni.

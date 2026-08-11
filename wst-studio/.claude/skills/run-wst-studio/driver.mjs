@@ -126,6 +126,41 @@ ok(
   "plan @ L6 lists effective outputs and the exact commands still missing",
 );
 
+console.log("\n== armed state ==");
+// Throwaway state: never touch the repo's committed posture.
+const st = join(tmp, "state.json");
+writeFileSync(st, JSON.stringify({ arme: "L3", historique: [] }));
+
+const skip = await studio(["arm", "L6", "--attest", YT, "--state", st]);
+ok(skip.code === 1 && skip.out.includes("saut de palier"), "arm refuses to skip a level");
+
+const noAttest = await studio(["arm", "L4", "--state", st]);
+ok(
+  noAttest.code === 1 && noAttest.out.includes("GITHUB_TOKEN"),
+  "arm L4 refused until the required secret is attested",
+);
+
+const armL4 = await studio([
+  "arm", "L4", "--attest", "GITHUB_TOKEN", "--par", "driver", "--state", st,
+]);
+ok(armL4.code === 0 && armL4.out.includes("L3 -> L4"), "arm L4 succeeds once attested");
+
+const status = await studio(["status", "--state", st]);
+ok(
+  status.out.includes("L4") && status.out.includes("commit_hugo") && status.out.includes("driver"),
+  "status reports the armed level, what it grants, and who armed it",
+);
+
+// The gate must follow the armed state when --level is omitted.
+const implicit = await studio([
+  "gate", "--action", "commit_hugo", "--kits", KITS, "--state", st,
+]);
+ok(implicit.code === 0, "gate defaults to the armed level and honours attested secrets");
+const implicitYt = await studio([
+  "gate", "--action", "youtube_metadata", "--kits", KITS, "--state", st,
+]);
+ok(implicitYt.code === 1, "gate still refuses an action above the armed level");
+
 console.log("\n== ledger ==");
 const led = join(tmp, "ledger.jsonl");
 await studio(["gate", "--level", "L3", "--action", "youtube_metadata", "--kits", KITS, "--ledger", led]);

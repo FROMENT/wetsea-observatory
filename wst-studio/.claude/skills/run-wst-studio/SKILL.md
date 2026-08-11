@@ -40,9 +40,13 @@ and decisions are journaled. Ends in `DRIVER OK`, exit 0.
 ```sh
 npm run build                        # esbuild -> dist/studio.mjs
 
+node dist/studio.mjs status          # armed level, next step, history
 node dist/studio.mjs levels          # the ladder + invariants
 node dist/studio.mjs explain L6      # decider, blast radius, rollback, prerequisites
 node dist/studio.mjs check --kits ../wetsea-packaging/examples/pilot_kits.json
+
+# arm a level — refuses level-skipping and unattested secrets
+node dist/studio.mjs arm L4 --attest GITHUB_TOKEN --motif "..."
 
 # "am I allowed?" — exit 0 allowed, 1 refused, 2 usage
 node dist/studio.mjs gate --level L6 --action youtube_metadata \
@@ -76,6 +80,13 @@ Actions: `generate`, `commit_hugo`, `notion_draft`, `youtube_metadata`,
   to the Studio with no sync.
 - **Exit code of `plan` is `1` if any kit is non-conformant**, even when the plan
   itself printed fine — it reflects publishability, not command success.
+- **`arm` writes `studio.state.json`, which is committed.** When testing, always
+  pass `--state /tmp/…json` so you don't silently change the repo's declared
+  posture — the driver does exactly this.
+- **Attesting is not verifying.** `--attest GITHUB_TOKEN` records a signed,
+  dated claim that the secret is set in the Worker; the Studio cannot see
+  Cloudflare secrets. Never attest on someone else's behalf — it poisons the
+  audit trail the mechanism exists to provide.
 
 ## Troubleshooting
 
