@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - "wetsea-packaging/**"
+      - "wst-studio/**"
       - ".github/workflows/typecheck.yml"
   pull_request:
     paths:
       - "wetsea-packaging/**"
+      - "wst-studio/**"
       - ".github/workflows/typecheck.yml"
 
 jobs:
@@ -25,3 +27,21 @@ jobs:
           cache-dependency-path: wetsea-packaging/package-lock.json
       - run: npm ci
       - run: npm run typecheck
+
+  studio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # The Studio imports the pipeline's canon, so the pipeline's deps must
+      # be present for `zod` to resolve from that file's location.
+      - run: npm ci
+        working-directory: wetsea-packaging
+      - run: npm install
+        working-directory: wst-studio
+      - run: npm run typecheck
+        working-directory: wst-studio
+      - run: node .claude/skills/run-wst-studio/driver.mjs
+        working-directory: wst-studio
